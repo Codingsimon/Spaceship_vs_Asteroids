@@ -1,7 +1,5 @@
 package app;
 
-import java.awt.Canvas;
-
 import javax.swing.JFrame;
 
 import gamefigures.Spaceship;
@@ -37,17 +35,16 @@ public class App extends JFrame {
         Vars.previousTime = 0;
         Vars.currentTime = System.nanoTime();
 
-        //Game objects
-        Vars.spaceship = new Spaceship();
 
         //Window setup
         Vars.window = new Window();
-        Vars.canvas = new DrawWindow();
+        Vars.canvas = new DrawCanvas();
         Vars.canvas.setVisible(true);
         Vars.window.getContentPane().add(Vars.canvas);
 
-        
-        
+        //Game objects
+        Vars.spaceship = new Spaceship();
+
     }
 
     public static void update(long deltaTime){
@@ -55,6 +52,6 @@ public class App extends JFrame {
     }
 
     public static void draw(){
-
+        Vars.canvas.repaint();
     }
 }

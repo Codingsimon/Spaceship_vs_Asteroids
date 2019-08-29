@@ -10,9 +10,8 @@ public class Window extends JFrame{
         setVisible(true);
         setTitle("First GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
-    public static int scalfactor(int origWidth){
-        return (int)((double)origWidth/(double)100 * (double)260);
-    }
 }

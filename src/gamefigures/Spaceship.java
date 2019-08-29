@@ -1,14 +1,16 @@
 package gamefigures;
 
+import app.Vars;
+
 public class Spaceship{
     // position/velocity/acceleration
     int posx;
-    int posy = 200;
-    int vel = 0;
+    int posy;
+    int vel = 1;
     int accel = 1;
     //rotation/orientation stuff
     int rotvel = 0;
-    int orientation = 0;
+    int orientation = 90;
     // control - bools
     boolean turnleft = false;
     boolean turnright = false;
@@ -18,7 +20,8 @@ public class Spaceship{
 
     //constructor
     public Spaceship(){
-        posx = 300;
+        posx = Vars.window.getWidth()/2;
+        posy = Vars.window.getHeight()/2;
     }
 
     //updates every gametick
@@ -50,17 +53,9 @@ public class Spaceship{
         }
     }
 
-    //modifies velocity and calculates position every update
     private void boost(){
         if(boosting){
-            vel += accel;
-            boosting = false;
+           // posx += Math.Sin();
         }
-        if(reversing){
-            vel -= accel;
-            reversing = false;
-        }
-        posx = (int) (Math.sin(orientation) * vel);
-        posy = (int) (Math.cos(orientation) * vel);
     }
 }
