@@ -4,7 +4,7 @@ public class Spaceship{
     // position/velocity/acceleration
     int posx;
     int posy = 200;
-    int vel = 1;
+    int vel = 0;
     int accel = 1;
     //rotation/orientation stuff
     int rotvel = 0;
@@ -50,9 +50,17 @@ public class Spaceship{
         }
     }
 
+    //modifies velocity and calculates position every update
     private void boost(){
         if(boosting){
-           // posx += Math.Sin();
+            vel += accel;
+            boosting = false;
         }
+        if(reversing){
+            vel -= accel;
+            reversing = false;
+        }
+        posx = Math.Sin(orientation) * vel;
+        posy = Math.Cos(orientation) * vel;
     }
 }
