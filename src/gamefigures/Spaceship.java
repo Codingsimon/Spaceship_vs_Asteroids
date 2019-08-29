@@ -60,7 +60,7 @@ public class Spaceship{
             vel -= accel;
             reversing = false;
         }
-        posx = Math.Sin(orientation) * vel;
-        posy = Math.Cos(orientation) * vel;
+        posx = (int) (Math.sin(orientation) * vel);
+        posy = (int) (Math.cos(orientation) * vel);
     }
 }
