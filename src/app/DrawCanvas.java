@@ -21,7 +21,7 @@ public class DrawCanvas extends JComponent{
         oldPos = g2d.getTransform();
         g2d.translate(-shipPixelWidth/2, -shipPixelHeight/2);
 //        g2d.rotate(0.5);
-        g2d.drawImage(Vars.sp_ship_1, Vars.spaceship.getX(), Vars.spaceship.getY(), shipPixelWidth, shipPixelHeight, null);
+        g2d.drawImage(Vars.getShipImage(), Vars.spaceship.getX(), Vars.spaceship.getY(), shipPixelWidth, shipPixelHeight, null);
         g2d.setTransform(oldPos);
         g2d.setColor(Color.BLUE);;
 

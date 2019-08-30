@@ -4,6 +4,8 @@ import app.GameListener;
 
 public class Spaceship{
 
+    int upgradeLevel = 4;
+
     // position/velocity/acceleration variables
     int posx;
     int posy = 200;
@@ -37,6 +39,14 @@ public class Spaceship{
     }
     public int getOrientation(){
         return orientation;
+    }
+
+    public int getUpgradeLevel(){
+        return upgradeLevel;
+    }
+
+    public void setUpgradeLevel(int upgradeLevel){
+        this.upgradeLevel = upgradeLevel;
     }
 
     //modifies orientation every update

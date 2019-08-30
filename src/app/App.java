@@ -25,7 +25,7 @@ public class App extends JFrame {
                 Vars.deltaTime = 150_000;
             }
 
-           /*  spaceship.update(deltaTime); */
+            Vars.spaceship.update(Vars.deltaTime);
             draw();
         }
     }
@@ -41,6 +41,8 @@ public class App extends JFrame {
         Vars.canvas = new DrawCanvas();
         Vars.canvas.setVisible(true);
         Vars.window.getContentPane().add(Vars.canvas);
+        Vars.gameListener = new GameListener();
+        Vars.window.addKeyListener(Vars.gameListener);
 
         //Game objects
         Vars.spaceship = new Spaceship();
