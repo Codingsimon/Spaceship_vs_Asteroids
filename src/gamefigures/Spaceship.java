@@ -3,6 +3,8 @@ package gamefigures;
 import app.GameListener;
 import app.Vars;
 
+import java.awt.image.BufferedImage;
+
 public class Spaceship{
 
     int upgradeLevel = 1;
@@ -26,10 +28,10 @@ public class Spaceship{
     }
 
     //updates every gametick
-    public void update(long deltaTime){
+    public void update(){
         boost();
         turn();
-        System.out.println("x: "+posx+", y: "+posy+", or: "+orientation+ ", vel: "+vel);
+//        System.out.println("x: "+posx+", y: "+posy+", or: "+orientation+ ", vel: "+vel);
     }
 
     //get spaceship data
@@ -77,4 +79,28 @@ public class Spaceship{
         posx += (int) (Math.sin(orientation) * vel / Vars.deltaTime);
         posy += (int) (Math.cos(orientation) * vel / Vars.deltaTime);
     }
+
+    public BufferedImage getImage() {
+        switch (upgradeLevel) {
+                    case 1:
+                        return Vars.sp_ship_1;
+                    case 2:
+                        return Vars.sp_ship_2;
+                    case 3:
+                        return Vars.sp_ship_3;
+                    case 4:
+                        return Vars.sp_ship_4;
+            }
+            return null;
+        }
+
+        public int getWidthScale(){
+            return (int) (this.getImage().getWidth() * Vars.getScalfactor());
+        }
+
+    public int getHeightScale(){
+        return (int) (this.getImage().getHeight() * Vars.getScalfactor());
+    }
+
+
 }
