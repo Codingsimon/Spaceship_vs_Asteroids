@@ -4,11 +4,11 @@ import app.GameListener;
 
 public class Spaceship{
 
-    int upgradeLevel = 4;
+    int upgradeLevel = 1;
 
     // position/velocity/acceleration variables
     int posx;
-    int posy = 200;
+    int posy = 300;
     int vel = 0;
     int accel = 1;
 

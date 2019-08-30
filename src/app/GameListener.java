@@ -51,9 +51,11 @@ public class GameListener implements KeyListener {
     public void keyPressed(KeyEvent key){
         if (key.getKeyCode() == KeyEvent.VK_W){
             up = true;
+
         }
         if (key.getKeyCode() == KeyEvent.VK_S){
             down = true;
+            System.out.println("saf");
         }
         if (key.getKeyCode() == KeyEvent.VK_A){
             left = true;
