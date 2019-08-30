@@ -1,27 +1,26 @@
 package gamefigures;
 
-import app.Vars;
+import app.GameListener;
 
 public class Spaceship{
     // position/velocity/acceleration
     int posx;
-    int posy;
-    int vel = 1;
+    int posy = 200;
+    int vel = 0;
     int accel = 1;
     //rotation/orientation stuff
     int rotvel = 0;
-    int orientation = 90;
+    int orientation = 0;
     // control - bools
-    boolean turnleft = false;
-    boolean turnright = false;
-    boolean boosting = false;
-    boolean reversing = false;
-    boolean shooting = false;
+//    boolean turnleft = false;
+//    boolean turnright = false;
+//    boolean boosting = false;
+//    boolean reversing = false;
+//    boolean shooting = false;
 
-    //constructor
+    //constructor TODO
     public Spaceship(){
-        posx = Vars.window.getWidth()/2;
-        posy = Vars.window.getHeight()/2;
+        posx = 300;
     }
 
     //updates every gametick
@@ -43,19 +42,27 @@ public class Spaceship{
 
     //modifies orientation every update
     private void turn(){
-        if(turnleft){
+        if(GameListener.getLeftState()){
             orientation += rotvel;
-            turnleft = false;
+            GameListener.resetLeftState();
         }
-        if(turnright){
+        if(GameListener.getRightState()){
             orientation -= rotvel;
-            turnright = false;
+            GameListener.resetRightState();
         }
     }
 
+    //modifies velocity and calculates position every update
     private void boost(){
         if(boosting){
-           // posx += Math.Sin();
+            vel += accel;
+            boosting = false;
         }
+        if(reversing){
+            vel -= accel;
+            reversing = false;
+        }
+        posx = (int) (Math.sin(orientation) * vel);
+        posy = (int) (Math.cos(orientation) * vel);
     }
 }
