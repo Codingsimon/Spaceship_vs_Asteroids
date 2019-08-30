@@ -1,6 +1,7 @@
 package gamefigures;
 
 import app.GameListener;
+import app.Vars;
 
 public class Spaceship{
 
@@ -13,7 +14,7 @@ public class Spaceship{
     int accel = 1;
 
     //rotation/orientation variables
-    int rotvel = 0;
+    int rotvel = 1;
     int orientation = 0;
 
     //instantiate key listener
@@ -26,8 +27,9 @@ public class Spaceship{
 
     //updates every gametick
     public void update(long deltaTime){
-       /*  posx = (int)((long)posx + (long)velocity * deltaTime); */
+        boost();
         turn();
+        System.out.println("x: "+posx+", y: "+posy+", or: "+orientation+ ", vel: "+vel);
     }
 
     //get spaceship data
@@ -51,27 +53,28 @@ public class Spaceship{
 
     //modifies orientation every update
     private void turn(){
-        if(ship.getLeftState()){
+        if(Vars.gameListener.getLeftState()){
             orientation += rotvel;
-            ship.resetLeftState();
+            Vars.gameListener.resetLeftState();
         }
-        if(ship.getRightState()){
-            orientation -= rotvel;
+        if(Vars.gameListener.getRightState()){
+            orientation = orientation-rotvel;
             ship.resetRightState();
         }
+        orientation = Math.abs(orientation%360);
     }
 
     //modifies velocity and calculates position every update
     private void boost(){
-        if(ship.getUpState()){
+        if(Vars.gameListener.getUpState()){
             vel += accel;
-            ship.resetUpState();
+            Vars.gameListener.resetUpState();
         }
-        if(ship.getDownState()){
+        if(Vars.gameListener.getDownState()){
             vel -= accel;
-            ship.resetDownState();
+            Vars.gameListener.resetDownState();
         }
-        posx = (int) (Math.sin(orientation) * vel);
-        posy = (int) (Math.cos(orientation) * vel);
+        posx += (int) (Math.sin(orientation) * vel / Vars.deltaTime);
+        posy += (int) (Math.cos(orientation) * vel / Vars.deltaTime);
     }
 }
