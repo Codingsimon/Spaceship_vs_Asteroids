@@ -3,20 +3,19 @@ package gamefigures;
 import app.GameListener;
 
 public class Spaceship{
-    // position/velocity/acceleration
+
+    // position/velocity/acceleration variables
     int posx;
     int posy = 200;
     int vel = 0;
     int accel = 1;
-    //rotation/orientation stuff
+
+    //rotation/orientation variables
     int rotvel = 0;
     int orientation = 0;
-    // control - bools
-//    boolean turnleft = false;
-//    boolean turnright = false;
-//    boolean boosting = false;
-//    boolean reversing = false;
-//    boolean shooting = false;
+
+    //instantiate key listener
+    GameListener ship = new GameListener();
 
     //constructor TODO
     public Spaceship(){
@@ -42,25 +41,25 @@ public class Spaceship{
 
     //modifies orientation every update
     private void turn(){
-        if(GameListener.getLeftState()){
+        if(ship.getLeftState()){
             orientation += rotvel;
-            GameListener.resetLeftState();
+            ship.resetLeftState();
         }
-        if(GameListener.getRightState()){
+        if(ship.getRightState()){
             orientation -= rotvel;
-            GameListener.resetRightState();
+            ship.resetRightState();
         }
     }
 
     //modifies velocity and calculates position every update
     private void boost(){
-        if(boosting){
+        if(ship.getUpState()){
             vel += accel;
-            boosting = false;
+            ship.resetUpState();
         }
-        if(reversing){
+        if(ship.getDownState()){
             vel -= accel;
-            reversing = false;
+            ship.resetDownState();
         }
         posx = (int) (Math.sin(orientation) * vel);
         posy = (int) (Math.cos(orientation) * vel);
