@@ -5,15 +5,11 @@ import app.Vars;
 
 import java.awt.image.BufferedImage;
 
-public class Spaceship{
+public class Spaceship extends FlyingObject{
 
     int upgradeLevel = 1;
 
     // position/velocity/acceleration variables
-    double posx;
-    double posy = 300;
-    double xvel = 0;
-    double yvel = 0;
     double accel = 1;
 
     //rotation/orientation variables
@@ -35,12 +31,6 @@ public class Spaceship{
     }
 
     //get spaceship data
-    public int getX(){
-        return (int) posx;
-    }
-    public int getY(){
-        return (int) posy;
-    }
     public int getOrientation(){
         return (int) orientation;
     }
@@ -53,20 +43,7 @@ public class Spaceship{
         this.upgradeLevel = upgradeLevel;
     }
 
-    private void warp(){
-        if (Vars.gameHeight <= getY()){
-            posy -= Vars.gameHeight;
-        }
-        if (Vars.gameWidth <= getX()){
-            posx -= Vars.gameWidth;
-        }
-        if (0 >= getY()){
-            posy += Vars.gameHeight;
-        }
-        if (0 >= getX()){
-            posx += Vars.gameWidth;
-        }
-    }
+
 
     //modifies orientation every update
     private void turn(){
@@ -117,11 +94,4 @@ public class Spaceship{
             return null;
         }
 
-        public int getWidthScale(){
-            return (int) (this.getImage().getWidth() * Vars.getScalfactor());
-        }
-
-    public int getHeightScale(){
-        return (int) (this.getImage().getHeight() * Vars.getScalfactor());
-    }
 }
