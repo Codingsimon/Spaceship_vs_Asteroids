@@ -10,14 +10,15 @@ public class Spaceship{
     int upgradeLevel = 1;
 
     // position/velocity/acceleration variables
-    int posx;
-    int posy = 300;
-    int vel = 1;
-    int accel = 1;
+    double posx;
+    double posy = 300;
+    double xvel = 0;
+    double yvel = 0;
+    double accel = 1;
 
     //rotation/orientation variables
-    int rotvel = 1;
-    int orientation = 0;
+    double rotvel = 5;
+    double orientation = 0;
 
     //instantiate key listener
     GameListener ship = new GameListener();
@@ -36,13 +37,13 @@ public class Spaceship{
 
     //get spaceship data
     public int getX(){
-        return posx;
+        return (int) posx;
     }
     public int getY(){
-        return posy;
+        return (int) posy;
     }
     public int getOrientation(){
-        return orientation;
+        return (int) orientation;
     }
 
     public int getUpgradeLevel(){
@@ -56,29 +57,39 @@ public class Spaceship{
     //modifies orientation every update
     private void turn(){
         if(Vars.gameListener.getLeftState()){
-            orientation += rotvel;
+            orientation -= rotvel;
             Vars.gameListener.resetLeftState();
         }
         if(Vars.gameListener.getRightState()){
-            orientation = orientation-rotvel;
-            ship.resetRightState();
+            orientation += rotvel;
+            Vars.gameListener.resetRightState();
+        }
+        if(orientation < 0) {
+            orientation += 360;
         }
         orientation = orientation%360;
         System.out.println(orientation);
     }
 
-    //modifies velocity and calculates position every update
+    //xvel, yvel, orientation -> posx posy
     private void boost(){
+        //boost
         if(Vars.gameListener.getUpState()){
-            vel += accel;
+            xvel += (Math.sin(Math.PI*2*(orientation/360)) * accel);
+            yvel += (Math.cos(Math.PI*2*(orientation/360)) * accel);
             Vars.gameListener.resetUpState();
         }
+        //reverse
         if(Vars.gameListener.getDownState()){
-            vel -= accel;
+            xvel -= (Math.sin(Math.PI*2*(orientation/360)) * accel);
+            yvel -= (Math.cos(Math.PI*2*(orientation/360)) * accel);
             Vars.gameListener.resetDownState();
         }
-        posx += (int) (Math.sin(orientation) * -vel);
-        posy += (int) (Math.cos(orientation) * -vel);
+        //flip coordinate system
+        posx += xvel;
+        posy -= yvel;
+        System.out.println(xvel);
+        System.out.println(yvel);
     }
 
     public BufferedImage getImage() {
@@ -102,6 +113,4 @@ public class Spaceship{
     public int getHeightScale(){
         return (int) (this.getImage().getHeight() * Vars.getScalfactor());
     }
-
-
 }
