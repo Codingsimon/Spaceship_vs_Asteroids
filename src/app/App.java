@@ -18,6 +18,7 @@ public class App extends JFrame {
 
     public static void gameloop(){
         double ns = 1000_000_000 / FPS;
+        Vars.sporner.setLevel(0);
 
         while(true){
             Vars.previousTime = Vars.currentTime;
@@ -55,11 +56,16 @@ public class App extends JFrame {
         //Game objects
         Vars.spaceship = new Spaceship();
         Vars.sporner = new EnemySporner();
-        Vars.sporner.newLevelSetup();
+
+        Vars.sporner.setLevel(0);
 
     }
 
     public static void update(){
+        if (Vars.sporner.getEnemycount() <= 0){
+            Vars.sporner.setLevel(Vars.level);
+            Vars.level++;
+        }
         Vars.spaceship.update();
         for (Enemy enemy : Vars.enemyList) {
             enemy.update();

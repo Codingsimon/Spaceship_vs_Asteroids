@@ -15,12 +15,12 @@ public class Vars {
     public static double previousTime;
     public static Spaceship spaceship;
     public static Window window;
-    public static int gameWidth = 600;
-    public static int gameHeight = 600;
+    public static int gameWidth = 900;
+    public static int gameHeight = 900;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
     public static GameListener gameListener;
-    public static int level = 1;
+    public static int level = 0;
     public static EnemySporner sporner;
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
@@ -65,7 +65,7 @@ public class Vars {
             sp_asteroid_red_small = ImageIO.read(new File("sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
 
         } catch (IOException e) {
-            System.out.println("Bilder konnten nicht geladen werden");
+            System.out.println("Bilder konnten nicht geladen werden. Da Pfad passt nu ned!!!");
         }
     }
 

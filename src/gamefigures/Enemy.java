@@ -6,24 +6,33 @@ import enums.AsteroidColor;
 import enums.EnemyType;
 
 import java.awt.image.BufferedImage;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Enemy {
-    private int posx = 1;
-    private int posy = 1;
-    private int speedx = 0;
-    private int speedy = -1;
+    private double posx = 1;
+    private double posy = 1;
+    private double speedx = 0.1;
+    private double speedy = 0.1;
+
     EnemyType type;
     AsteroidColor color;
     AsteroidSize size;
 
-    public Enemy(EnemyType type){
+    public Enemy(EnemyType type, int speedlevel){
+        speedx = randomNumber(-speedlevel, speedlevel);
+        speedy = randomNumber(-speedlevel, speedlevel);
         if (type == EnemyType.UFO){
             this.type = type;
         }
         System.out.println("Asteroid needs a Size");
     }
 
-    public Enemy(EnemyType type, AsteroidSize size){
+    public Enemy(EnemyType type, AsteroidSize size, int speedlevel){
+        speedx = randomNumber(-speedlevel, speedlevel);
+        speedy = randomNumber(-speedlevel, speedlevel);
+
+//        System.out.println(speedx);
+
         if (type == EnemyType.UFO){
             createUFO();
         }
@@ -33,11 +42,19 @@ public class Enemy {
         setPosition();
     }
 
+    public double randomNumber(int min, int max){
+        double speed = ThreadLocalRandom.current().nextInt(min, max + 1) / 10;
+        if (speed == 0){
+            return randomNumber(min,max);
+        }
+        return speed;
+    }
+
     private void setPosition(){
-        this.posy = 300;
-        this.posx = 10;
-//        this.posx = (int)(Math.random() * Vars.gameWidth);
-//        this.posy = (int)(Math.random() * Vars.gameHeight);
+//        this.posy = 300;
+//        this.posx = 10;
+        this.posx = Math.random() * Vars.gameWidth;
+        this.posy = Math.random() * Vars.gameHeight;
     }
 
     private void createUFO(){
@@ -88,17 +105,16 @@ public class Enemy {
     }
 
     public int getX(){
-        return posx;
+        return (int)posx;
     }
     public int getY(){
-        return posy;
+        return (int)posy;
     }
 
     public  void  update(){
         warp();
         posx = posx + speedx;
         posy = posy + speedy;
-        System.out.println(posx);
     }
 
     public void warp(){

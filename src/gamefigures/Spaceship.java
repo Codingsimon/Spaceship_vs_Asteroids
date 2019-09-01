@@ -64,7 +64,7 @@ public class Spaceship{
             ship.resetRightState();
         }
         orientation = orientation%360;
-        System.out.println(orientation);
+//        System.out.println(orientation);
     }
 
     //modifies velocity and calculates position every update
