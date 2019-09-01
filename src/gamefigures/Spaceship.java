@@ -63,7 +63,8 @@ public class Spaceship{
             orientation = orientation-rotvel;
             ship.resetRightState();
         }
-        orientation = Math.abs(orientation%360);
+        orientation = orientation%360;
+        System.out.println(orientation);
     }
 
     //modifies velocity and calculates position every update
@@ -76,8 +77,8 @@ public class Spaceship{
             vel -= accel;
             Vars.gameListener.resetDownState();
         }
-        posx += (int) (Math.sin(orientation) * vel / Vars.deltaTime);
-        posy += (int) (Math.cos(orientation) * vel / Vars.deltaTime);
+        posx += (int) (Math.sin(orientation) * -vel);
+        posy += (int) (Math.cos(orientation) * -vel);
     }
 
     public BufferedImage getImage() {
