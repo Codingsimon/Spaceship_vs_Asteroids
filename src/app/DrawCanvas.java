@@ -17,23 +17,10 @@ public class DrawCanvas extends JComponent{
         g2d.fillRect(0,0,Vars.canvas.getWidth(), Vars.canvas.getHeight());
 
 
-        //draw Ship
-//        oldPos = g2d.getTransform();
-//        g2d.translate(-shipPixelWidth/2, -shipPixelHeight/2);
-//        g2d.translate(Vars.canvas.getWidth()/2,Vars.canvas.getHeight()/2);
-//        g2d.rotate(0.5);
-//        g2d.drawImage(Vars.getShipImage(), Vars.spaceship.getX(), Vars.spaceship.getY(), shipPixelWidth, shipPixelHeight, null);
-//        g2d.setTransform(oldPos);
-
-//        AffineTransform transform = new AffineTransform();
-//        transform.rotate(Math.toRadians(45), Vars.spaceship.getX() + shipPixelWidth/2, Vars.spaceship.getY() + shipPixelHeight/2);
-//        g2d.fill(transform);
-
-
         oldPos = g2d.getTransform();
-        g2d.translate(-Vars.spaceship.getWidthScale()/2, -Vars.spaceship.getHeightScale()/2);
+        g2d.translate(-Vars.spaceship.getWidth()/2, -Vars.spaceship.getHeight()/2);
         AffineTransform at = AffineTransform.getTranslateInstance(Vars.spaceship.getX(), Vars.spaceship.getY());
-        at.rotate(Math.toRadians(Vars.spaceship.getOrientation()),Vars.spaceship.getWidthScale()/2, Vars.spaceship.getHeightScale()/2);
+        at.rotate(Math.toRadians(Vars.spaceship.getOrientation()),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
         at.scale(Vars.getScalfactor(), Vars.getScalfactor());
         g2d.drawImage(Vars.sp_ship_1, at, null);
         g2d.setTransform(oldPos);
