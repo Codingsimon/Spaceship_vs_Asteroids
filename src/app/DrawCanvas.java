@@ -41,9 +41,11 @@ public class DrawCanvas extends JComponent{
 
 
         for (Enemy enemy : Vars.enemyList){
+            oldPos = g2d.getTransform();
             at = AffineTransform.getTranslateInstance(enemy.getX(), enemy.getY());
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
             g2d.drawImage(enemy.getImage(), at, null);
+            g2d.setTransform(oldPos);
         }
 
         g2d.setColor(Color.BLUE);

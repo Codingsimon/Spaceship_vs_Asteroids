@@ -8,10 +8,10 @@ import enums.EnemyType;
 import java.awt.image.BufferedImage;
 
 public class Enemy {
-    public int posx = 300;
-    public int posy = 300;
-    public int speedx = 1;
-    public int speedy = -1;
+    private int posx = 1;
+    private int posy = 1;
+    private int speedx = 0;
+    private int speedy = -1;
     EnemyType type;
     AsteroidColor color;
     AsteroidSize size;
@@ -34,8 +34,10 @@ public class Enemy {
     }
 
     private void setPosition(){
-        this.posx = (int)(Math.random() * Vars.canvas.getWidth());
-        this.posy = (int)(Math.random() * Vars.canvas.getHeight());
+        this.posy = 300;
+        this.posx = 10;
+//        this.posx = (int)(Math.random() * Vars.gameWidth);
+//        this.posy = (int)(Math.random() * Vars.gameHeight);
     }
 
     private void createUFO(){
@@ -46,7 +48,6 @@ public class Enemy {
         this.type = EnemyType.ASTEREOID;
         this.size = size;
         int random = (int)(Math.random() * 3);
-        System.out.println(random);
         switch (random){
             case 0 : this.color = AsteroidColor.BROWN;
                 break;
@@ -60,22 +61,30 @@ public class Enemy {
     public BufferedImage getImage(){
         switch (color){
             case BROWN : switch (size){
-                case LARGE : return Vars.asteroid_brown_big;
-                case MEDIUM: return Vars.asteroid_brown_medium;
-                case SMALL: return Vars.asteroid_brown_small;
+                case LARGE : return Vars.sp_asteroid_brown_big;
+                case MEDIUM: return Vars.sp_asteroid_brown_medium;
+                case SMALL: return Vars.sp_asteroid_brown_small;
             }
             case GREEN : switch (size){
-                case LARGE : return Vars.asteroid_green_big;
-                case MEDIUM: return Vars.asteroid_green_medium;
-                case SMALL: return Vars.asteroid_green_small;
+                case LARGE : return Vars.sp_asteroid_green_big;
+                case MEDIUM: return Vars.sp_asteroid_green_medium;
+                case SMALL: return Vars.sp_asteroid_green_small;
             }
             case RED : switch (size){
-                case LARGE : return Vars.asteroid_red_big;
-                case MEDIUM: return Vars.asteroid_red_medium;
-                case SMALL: return Vars.asteroid_red_small;
+                case LARGE : return Vars.sp_asteroid_red_big;
+                case MEDIUM: return Vars.sp_asteroid_red_medium;
+                case SMALL: return Vars.sp_asteroid_red_small;
             }
         }
         return null;
+    }
+
+    public int getWidth(){
+        return (int)((double)getImage().getWidth() * Vars.getScalfactor());
+    }
+
+    public int getHeight(){
+        return (int)((double)getImage().getHeight() * Vars.getScalfactor());
     }
 
     public int getX(){
@@ -89,20 +98,21 @@ public class Enemy {
         warp();
         posx = posx + speedx;
         posy = posy + speedy;
+        System.out.println(posx);
     }
 
     public void warp(){
-        if (posx > Vars.canvas.getWidth()){
-            posx = 0;
+        if (posx > Vars.gameWidth){
+            posx = 0 - getWidth();
         }
-        if (posx < 0){
-            posx = Vars.canvas.getWidth();
+        if (posx < 0 - getWidth()){
+            posx = Vars.gameWidth;
         }
-        if (posy > Vars.canvas.getHeight()){
-            posy = 0;
+        if (posy > Vars.gameHeight){
+            posy = 0 - getHeight();
         }
-        if (posy < 0){
-            posy = Vars.canvas.getHeight();
+        if (posy < 0 - getHeight()){
+            posy = Vars.gameHeight;
         }
     }
 }

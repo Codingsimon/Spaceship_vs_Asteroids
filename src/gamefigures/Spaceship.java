@@ -12,7 +12,7 @@ public class Spaceship{
     // position/velocity/acceleration variables
     int posx;
     int posy = 300;
-    int vel = 0;
+    int vel = 1;
     int accel = 1;
 
     //rotation/orientation variables

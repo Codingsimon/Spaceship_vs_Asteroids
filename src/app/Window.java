@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 public class Window extends JFrame{
 
     public Window(){
-        setSize(600,600);
+        setSize(Vars.gameWidth,Vars.gameHeight);
         setVisible(true);
         setTitle("First GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

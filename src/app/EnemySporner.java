@@ -5,10 +5,14 @@ import enums.EnemyType;
 import gamefigures.Enemy;
 
 public class EnemySporner {
-    private int enemycount = 3;
-    private int small = 3;
-    private int medium = 3;
-    private int large = 3;
+    private int enemycount;
+    private int small = 1;
+    private int medium = 1;
+    private int large = 1;
+
+    public EnemySporner(){
+        enemycount = small + medium + large;
+    }
 
     public void levelUp(){
         small += 1;
