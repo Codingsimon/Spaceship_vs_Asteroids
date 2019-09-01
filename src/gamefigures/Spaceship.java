@@ -20,8 +20,7 @@ public class Spaceship{
     double rotvel = 5;
     double orientation = 0;
 
-    //instantiate key listener
-    GameListener ship = new GameListener();
+
 
     //constructor TODO
     public Spaceship(){
@@ -32,7 +31,7 @@ public class Spaceship{
     public void update(){
         boost();
         turn();
-//        System.out.println("x: "+posx+", y: "+posy+", or: "+orientation+ ", vel: "+vel);
+        warp();
     }
 
     //get spaceship data
@@ -54,6 +53,21 @@ public class Spaceship{
         this.upgradeLevel = upgradeLevel;
     }
 
+    private void warp(){
+        if (Vars.gameHeight <= getY()){
+            posy -= Vars.gameHeight;
+        }
+        if (Vars.gameWidth <= getX()){
+            posx -= Vars.gameWidth;
+        }
+        if (0 >= getY()){
+            posy += Vars.gameHeight;
+        }
+        if (0 >= getX()){
+            posx += Vars.gameWidth;
+        }
+    }
+
     //modifies orientation every update
     private void turn(){
         if(Vars.gameListener.getLeftState()){
@@ -68,7 +82,6 @@ public class Spaceship{
             orientation += 360;
         }
         orientation = orientation%360;
-        System.out.println(orientation);
     }
 
     //xvel, yvel, orientation -> posx posy
@@ -88,8 +101,6 @@ public class Spaceship{
         //flip coordinate system
         posx += xvel;
         posy -= yvel;
-        System.out.println(xvel);
-        System.out.println(yvel);
     }
 
     public BufferedImage getImage() {
