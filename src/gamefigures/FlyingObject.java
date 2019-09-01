@@ -57,5 +57,4 @@ public abstract class FlyingObject {
             posx += Vars.gameWidth;
         }
     }
-
 }

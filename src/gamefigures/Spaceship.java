@@ -13,7 +13,7 @@ public class Spaceship extends FlyingObject{
     double accel = 1;
 
     //rotation/orientation variables
-    double rotvel = 5;
+    double rotvel = 45;
     double orientation = 0;
 
 
@@ -25,6 +25,7 @@ public class Spaceship extends FlyingObject{
 
     //updates every gametick
     public void update(){
+        fire();
         boost();
         turn();
         warp();
@@ -80,6 +81,15 @@ public class Spaceship extends FlyingObject{
         posy -= yvel;
     }
 
+    private void fire(){
+        //fire!!1
+        if(Vars.gameListener.getFireState()){
+            Projectile projectile = new Projectile();
+            Vars.projectileList.add(projectile);
+            Vars.gameListener.resetFireState();
+        }
+    }
+
     public BufferedImage getImage() {
         switch (upgradeLevel) {
                     case 1:
@@ -93,5 +103,5 @@ public class Spaceship extends FlyingObject{
             }
             return null;
         }
-
 }
+

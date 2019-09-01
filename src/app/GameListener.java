@@ -1,5 +1,7 @@
 package app;
 //import key listening shit
+import gamefigures.Projectile;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -69,11 +71,9 @@ public class GameListener implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent keyEvent) {
-
     }
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-
     }
 }

@@ -3,6 +3,7 @@ package app;
 import javax.swing.JFrame;
 
 import gamefigures.Enemy;
+import gamefigures.Projectile;
 import gamefigures.Spaceship;
 
 
@@ -67,6 +68,9 @@ public class App extends JFrame {
             Vars.level++;
         }
         Vars.spaceship.update();
+        for (Projectile projectile : Vars.projectileList){
+            projectile.update();
+        }
         for (Enemy enemy : Vars.enemyList) {
             enemy.update();
         }

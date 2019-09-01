@@ -55,7 +55,7 @@ public class Enemy extends FlyingObject {
             case 2 : this.color = AsteroidColor.GREEN;
                 break;
         }
-    }
+}
 
     public BufferedImage getImage(){
         switch (color){
