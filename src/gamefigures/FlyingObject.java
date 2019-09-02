@@ -20,8 +20,8 @@ public abstract class FlyingObject {
     }
 
     void setStartPositionBorder(){
-        this.posx = Math.random() * Vars.gameWidth;
-        this.posy = Math.random() * Vars.gameHeight;
+//        this.posx = Math.random() * Vars.gameWidth;
+//        this.posy = Math.random() * Vars.gameHeight;
     }
 
     public abstract BufferedImage getImage();
@@ -57,4 +57,5 @@ public abstract class FlyingObject {
             posx += Vars.gameWidth;
         }
     }
+
 }

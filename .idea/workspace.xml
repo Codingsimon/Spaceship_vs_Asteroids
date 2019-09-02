@@ -13,6 +13,25 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.39356726">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="340">
+                  <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/App.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="470">
+                  <caret line="63" column="29" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="29" />
+=======
     <splitter split-orientation="horizontal" split-proportion="0.43033853">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -21,6 +40,7 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="442">
                   <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+>>>>>>> master
                   <folding>
                     <element signature="e#1721#1722#0" expanded="true" />
                     <element signature="e#1758#1759#0" expanded="true" />
@@ -32,8 +52,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="306">
+                  <caret line="25" column="33" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="33" />
+=======
                 <state relative-caret-position="136">
                   <caret line="18" column="32" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="32" />
+>>>>>>> master
                 </state>
               </provider>
             </entry>
@@ -48,6 +73,12 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+            <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1408">
+                  <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+=======
             <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="221">
@@ -61,6 +92,7 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="265">
                   <caret line="77" column="41" lean-forward="true" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
+>>>>>>> master
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#2291#2292#0" expanded="true" />
@@ -75,8 +107,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/app/GameListener.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="28">
+                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+=======
                 <state relative-caret-position="190">
                   <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+>>>>>>> master
                 </state>
               </provider>
             </entry>
@@ -84,17 +121,46 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+                <state relative-caret-position="572">
+                  <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+=======
                 <state relative-caret-position="1314">
                   <caret line="79" selection-start-line="79" selection-end-line="79" />
+>>>>>>> master
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1532#1533#0" expanded="true" />
                     <element signature="e#1573#1574#0" expanded="true" />
+<<<<<<< HEAD
+                    <element signature="e#2321#2322#0" expanded="true" />
+                    <element signature="e#2381#2382#0" expanded="true" />
+                    <element signature="e#2433#2434#0" expanded="true" />
+                    <element signature="e#2459#2460#0" expanded="true" />
+                    <element signature="e#2511#2512#0" expanded="true" />
+                    <element signature="e#2548#2549#0" expanded="true" />
+=======
+>>>>>>> master
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
+<<<<<<< HEAD
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/gamefigures/FlyingObject.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="663">
+                  <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#768#769#0" expanded="true" />
+                    <element signature="e#850#851#0" expanded="true" />
+                    <element signature="e#986#987#0" expanded="true" />
+                    <element signature="e#1018#1019#0" expanded="true" />
+                    <element signature="e#1041#1042#0" expanded="true" />
+                    <element signature="e#1073#1074#0" expanded="true" />
+=======
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/Spaceship.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -110,6 +176,7 @@
                     <element signature="e#862#863#0" expanded="true" />
                     <element signature="e#914#915#0" expanded="true" />
                     <element signature="e#962#963#0" expanded="true" />
+>>>>>>> master
                   </folding>
                 </state>
               </provider>
@@ -119,6 +186,30 @@
       </split-first>
       <split-second>
         <leaf>
+<<<<<<< HEAD
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/gamefigures/Spaceship.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="268">
+                  <caret line="131" column="41" lean-forward="true" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#4106#4107#0" expanded="true" />
+                    <element signature="e#4149#4150#0" expanded="true" />
+                    <element signature="e#4205#4206#0" expanded="true" />
+                    <element signature="e#4249#4250#0" expanded="true" />
+                    <element signature="e#4304#4305#0" expanded="true" />
+                    <element signature="e#4348#4349#0" expanded="true" />
+                    <element signature="e#4404#4405#0" expanded="true" />
+                    <element signature="e#4447#4448#0" expanded="true" />
+                    <element signature="e#4502#4503#0" expanded="true" />
+                    <element signature="e#4545#4546#0" expanded="true" />
+                    <element signature="e#4601#4602#0" expanded="true" />
+                    <element signature="e#4645#4646#0" expanded="true" />
+                    <element signature="e#4700#4701#0" expanded="true" />
+                    <element signature="e#4744#4745#0" expanded="true" />
+                    <element signature="e#4800#4801#0" expanded="true" />
+=======
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -148,6 +239,7 @@
                     <element signature="e#963#964#0" expanded="true" />
                     <element signature="e#986#987#0" expanded="true" />
                     <element signature="e#1018#1019#0" expanded="true" />
+>>>>>>> master
                   </folding>
                 </state>
               </provider>
@@ -173,8 +265,13 @@
       <find>getwid</find>
       <find>sys</find>
       <find>enemy</find>
+<<<<<<< HEAD
+      <find>spee</find>
+      <find>system</find>
+=======
       <find>system</find>
       <find>spee</find>
+>>>>>>> master
       <find>system.out</find>
     </findStrings>
   </component>
@@ -196,12 +293,19 @@
         <option value="$PROJECT_DIR$/src/app/Window.java" />
         <option value="$PROJECT_DIR$/src/app/GameListener.java" />
         <option value="$PROJECT_DIR$/src/app/Vars.java" />
-        <option value="$PROJECT_DIR$/src/app/App.java" />
         <option value="$PROJECT_DIR$/src/app/EnemySporner.java" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/src/app/App.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/FlyingObject.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/app/DrawCanvas.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/Spaceship.java" />
+=======
         <option value="$PROJECT_DIR$/src/gamefigures/Spaceship.java" />
         <option value="$PROJECT_DIR$/src/gamefigures/Enemy.java" />
         <option value="$PROJECT_DIR$/src/gamefigures/FlyingObject.java" />
         <option value="$PROJECT_DIR$/src/app/DrawCanvas.java" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -314,18 +418,30 @@
       <workItem from="1567123175885" duration="5718000" />
       <workItem from="1567164335922" duration="16143000" />
       <workItem from="1567352277687" duration="7379000" />
+<<<<<<< HEAD
+      <workItem from="1567361152591" duration="22969000" />
+=======
       <workItem from="1567361152591" duration="8500000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="65035000" />
+=======
     <option name="totallyTimeSpent" value="50566000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08848614" />
+=======
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
+>>>>>>> master
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -334,8 +450,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19654842" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.057526365" />
+=======
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.15340364" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5033557" />
+>>>>>>> master
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -356,38 +477,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692964" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39980826" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32978722" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Floobits" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -400,6 +489,18 @@
           <line>25</line>
           <properties />
           <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/App.java</url>
+          <line>32</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/DrawCanvas.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -500,13 +601,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Window.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        <state relative-caret-position="306">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="33" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/app/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="29" />
+          <folding>
+            <element signature="e#1721#1722#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1408">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#2342#2343#0" expanded="true" />
+            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -521,17 +645,32 @@
           <folding>
             <element signature="e#1721#1722#0" expanded="true" />
             <element signature="e#1758#1759#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/GameListener.java">
+    <entry file="file://$PROJECT_DIR$/src/app/Window.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/FlyingObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -542,10 +681,34 @@
             <element signature="e#2342#2343#0" expanded="true" />
             <element signature="e#2375#2376#0" expanded="true" />
             <element signature="e#2408#2409#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/app/GameListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#2321#2322#0" expanded="true" />
+            <element signature="e#2381#2382#0" expanded="true" />
+            <element signature="e#2433#2434#0" expanded="true" />
+            <element signature="e#2459#2460#0" expanded="true" />
+            <element signature="e#2511#2512#0" expanded="true" />
+            <element signature="e#2548#2549#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -567,10 +730,41 @@
             <element signature="e#963#964#0" expanded="true" />
             <element signature="e#986#987#0" expanded="true" />
             <element signature="e#1018#1019#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="48" lean-forward="true" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/Spaceship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="131" column="41" lean-forward="true" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4106#4107#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
+            <element signature="e#4249#4250#0" expanded="true" />
+            <element signature="e#4304#4305#0" expanded="true" />
+            <element signature="e#4348#4349#0" expanded="true" />
+            <element signature="e#4404#4405#0" expanded="true" />
+            <element signature="e#4447#4448#0" expanded="true" />
+            <element signature="e#4502#4503#0" expanded="true" />
+            <element signature="e#4545#4546#0" expanded="true" />
+            <element signature="e#4601#4602#0" expanded="true" />
+            <element signature="e#4645#4646#0" expanded="true" />
+            <element signature="e#4700#4701#0" expanded="true" />
+            <element signature="e#4744#4745#0" expanded="true" />
+            <element signature="e#4800#4801#0" expanded="true" />
+=======
     <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
@@ -597,6 +791,7 @@
             <element signature="e#862#863#0" expanded="true" />
             <element signature="e#914#915#0" expanded="true" />
             <element signature="e#962#963#0" expanded="true" />
+>>>>>>> master
           </folding>
         </state>
       </provider>

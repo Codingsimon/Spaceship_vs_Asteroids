@@ -14,8 +14,6 @@ public class Enemy extends FlyingObject {
     AsteroidSize size;
 
     public Enemy(EnemyType type, int speedlevel){
-        posx = 1;
-        posy = 1;
 
         xvel = randomNumber(-speedlevel, speedlevel);
         yvel = randomNumber(-speedlevel, speedlevel);
@@ -78,11 +76,24 @@ public class Enemy extends FlyingObject {
         return null;
     }
 
+    public int getCenterX(){
+        return (int) this.getX() + this.getWidth()/2;
+    }
+
+    public int getCenterY(){
+        return (int) this.getY() + this.getHeight()/2;
+    }
+
+    public int getRadian(){
+        return (int)this.getWidth()/2;
+    }
 
     public  void  update(){
         warp();
-        posx = posx + xvel;
-        posy = posy + yvel;
+        posy = 310;
+        posx = 250;
+//        posx = posx + xvel;
+//        posy = posy + yvel;
     }
 
 }
