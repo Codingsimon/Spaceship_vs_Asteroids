@@ -25,7 +25,9 @@ public class Spaceship extends FlyingObject{
 
     //updates every gametick
     public void update(){
-        collision();
+        if (collision()){
+
+        }
         fire();
         boost();
         turn();
@@ -108,75 +110,44 @@ public class Spaceship extends FlyingObject{
             }
             return null;
         }
-}
+
 
         public boolean collision(){
-            for (Enemy e : Vars.enemyList) {
-                //--Circle center inside of rectangel
+        for (Enemy e : Vars.enemyList) {
+            //--Circle center inside of rectangel
 
-                //Vertical inside
-                if (e.posx + e.getWidth()/2 > this.posx && e.posx + e.getWidth()/2 < this.posx + this.getWidth()){
-                    //Horizontal inside
-                    if (e.posy + e.getHeight()/2 > this.posy && e.posy + e.getHeight() < this.posy + this.getHeight()){
-                        return true;
-                    }
-                }
-
-                //--Circle in Edge
-                //leftupper
-                if (pythagorean(Math.abs(e.getCenterY() - this.getLeftUpperCornerY()), Math.abs(e.getCenterX() - this.getLeftUpperCornerX())) < e.getRadian()){
-                    return true;
-                }
-                // rightupper
-                if (pythagorean(Math.abs(e.getCenterX() - Vars.spaceship.getRightUpperCornerX()), Math.abs(Vars.spaceship.getRightUpperCornerY() - e.getCenterY())) < e.getRadian()){
-                    return true;
-                }
-                //lowerright
-                if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getRightLowerCornerY()), Math.abs(e.getCenterX() - Vars.spaceship.getRightLowerCornerX())) < e.getWidth()/2){
-                    return true;
-                }
-                //lowerleft
-                if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getLeftLowerCornerY()), Math.abs(Vars.spaceship.getLeftLowerCornerX() - e.getCenterX())) < e.getWidth()/2){
+            //Vertical inside
+            if (e.posx + e.getWidth()/2 > this.posx && e.posx + e.getWidth()/2 < this.posx + this.getWidth()){
+                //Horizontal inside
+                if (e.posy + e.getHeight()/2 > this.posy && e.posy + e.getHeight() < this.posy + this.getHeight()){
+                    Vars.points -= 10;
                     return true;
                 }
             }
-            return false;
-        }
 
-        public int getLeftUpperCornerX(){
-            return (int)posx - getWidth()/2;
+            //--Circle in Edge
+            //leftupper
+            if (pythagorean(Math.abs(e.getCenterY() - this.getLeftUpperCornerY()), Math.abs(e.getCenterX() - this.getLeftUpperCornerX())) < e.getRadian()){
+                Vars.points -= 10;
+                return true;
+            }
+            // rightupper
+            if (pythagorean(Math.abs(e.getCenterX() - Vars.spaceship.getRightUpperCornerX()), Math.abs(Vars.spaceship.getRightUpperCornerY() - e.getCenterY())) < e.getRadian()){
+                Vars.points -= 10;
+                return true;
+            }
+            //lowerright
+            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getRightLowerCornerY()), Math.abs(e.getCenterX() - Vars.spaceship.getRightLowerCornerX())) < e.getWidth()/2){
+                Vars.points -= 10;
+                return true;
+            }
+            //lowerleft
+            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getLeftLowerCornerY()), Math.abs(Vars.spaceship.getLeftLowerCornerX() - e.getCenterX())) < e.getWidth()/2){
+                Vars.points -= 10;
+                return true;
+            }
         }
-
-        public int getLeftUpperCornerY(){
-            return (int)posy - getHeight()/2;
-        }
-
-        public int getRightUpperCornerX(){
-            return (int)posx + getWidth()/2;
-        }
-
-        public int getRightUpperCornerY(){
-            return (int)posy - getHeight()/2;
-        }
-
-        public int getLeftLowerCornerX(){
-            return (int)posx - getWidth()/2;
-        }
-
-        public int getLeftLowerCornerY(){
-            return (int)posy + getHeight()/2;
-        }
-
-        public int getRightLowerCornerX(){
-            return (int)posx + getWidth()/2;
-        }
-
-        public int getRightLowerCornerY(){
-            return (int)posy + getHeight()/2;
-        }
-
-        private double pythagorean(double kath1, double kath2){
-            return Math.sqrt(Math.pow(kath1,2) + Math.pow(kath2,2));
-        }
+        return false;
+    }
 
 }

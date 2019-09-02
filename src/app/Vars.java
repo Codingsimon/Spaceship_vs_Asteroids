@@ -33,6 +33,7 @@ public class Vars {
 
     public static int level = 0;
     public static EnemySporner sporner;
+    public static int points = 0;
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
     public static ArrayList<Projectile> projectileList = new ArrayList<>();

@@ -3,6 +3,7 @@ package gamefigures;
 import app.Vars;
 
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class FlyingObject {
@@ -56,6 +57,55 @@ public abstract class FlyingObject {
         if (0 >= getX()){
             posx += Vars.gameWidth;
         }
+    }
+
+    double pythagorean(double kath1, double kath2){
+        return Math.sqrt(Math.pow(kath1,2) + Math.pow(kath2,2));
+    }
+
+
+    public int getCenterX(){
+        return (int) this.getX() + this.getWidth()/2;
+    }
+
+    public int getCenterY(){
+        return (int) this.getY() + this.getHeight()/2;
+    }
+
+    public int getRadian(){
+        return (int)this.getWidth()/2;
+    }
+
+    public int getLeftUpperCornerX(){
+        return (int)posx - getWidth()/2;
+    }
+
+    public int getLeftUpperCornerY(){
+        return (int)posy - getHeight()/2;
+    }
+
+    public int getRightUpperCornerX(){
+        return (int)posx + getWidth()/2;
+    }
+
+    public int getRightUpperCornerY(){
+        return (int)posy - getHeight()/2;
+    }
+
+    public int getLeftLowerCornerX(){
+        return (int)posx - getWidth()/2;
+    }
+
+    public int getLeftLowerCornerY(){
+        return (int)posy + getHeight()/2;
+    }
+
+    public int getRightLowerCornerX(){
+        return (int)posx + getWidth()/2;
+    }
+
+    public int getRightLowerCornerY(){
+        return (int)posy + getHeight()/2;
     }
 
 }

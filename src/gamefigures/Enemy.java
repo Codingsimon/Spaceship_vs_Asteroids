@@ -7,7 +7,7 @@ import enums.EnemyType;
 
 import java.awt.image.BufferedImage;
 
-public class Enemy extends FlyingObject {
+public class Enemy extends FlyingObject{
 
     EnemyType type;
     AsteroidColor color;
@@ -74,18 +74,6 @@ public class Enemy extends FlyingObject {
             }
         }
         return null;
-    }
-
-    public int getCenterX(){
-        return (int) this.getX() + this.getWidth()/2;
-    }
-
-    public int getCenterY(){
-        return (int) this.getY() + this.getHeight()/2;
-    }
-
-    public int getRadian(){
-        return (int)this.getWidth()/2;
     }
 
     public  void  update(){

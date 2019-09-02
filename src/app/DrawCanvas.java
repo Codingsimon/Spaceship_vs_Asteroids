@@ -4,6 +4,7 @@ import gamefigures.Projectile;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.util.Iterator;
 import javax.swing.JComponent;
 
 @SuppressWarnings("serial")
