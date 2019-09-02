@@ -1,12 +1,11 @@
-package app;
+package keylistener;
 //import key listening shit
-import gamefigures.Projectile;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 //listener class
-public class GameListener implements KeyListener {
+public class Slistener implements KeyListener {
 
     //initialize variables for controls
     private boolean up = false;
@@ -32,40 +31,10 @@ public class GameListener implements KeyListener {
         return fire;
     }
 
-    //reset state of pressed key
-    public void resetUpState(){
-        up = false;
-    }
-    public void resetDownState(){
-        down = false;
-    }
-    public void resetLeftState(){
-        left = false;
-    }
-    public void resetRightState(){
-        right = false;
-    }
-    public void resetFireState(){
-        fire = false;
-    }
-
     //sets respective-pressed-key state to true on keypress
     public void keyPressed(KeyEvent key){
-        if (key.getKeyCode() == KeyEvent.VK_W){
-            up = true;
-
-        }
         if (key.getKeyCode() == KeyEvent.VK_S){
             down = true;
-        }
-        if (key.getKeyCode() == KeyEvent.VK_A){
-            left = true;
-        }
-        if (key.getKeyCode() == KeyEvent.VK_D){
-            right = true;
-        }
-        if (key.getKeyCode() == KeyEvent.VK_SPACE){
-            fire = true;
         }
     }
 
@@ -75,5 +44,6 @@ public class GameListener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
+        down = false;
     }
 }
