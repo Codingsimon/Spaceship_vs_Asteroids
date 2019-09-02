@@ -11,6 +11,7 @@ public abstract class FlyingObject {
     double posy;
     double xvel;
     double yvel;
+    double orientation;
 
     double randomNumber(int min, int max){
         double speed = ThreadLocalRandom.current().nextInt(min, max + 1) / 10;
@@ -59,10 +60,11 @@ public abstract class FlyingObject {
         }
     }
 
+    public abstract int getOrientation();
+
     double pythagorean(double kath1, double kath2){
         return Math.sqrt(Math.pow(kath1,2) + Math.pow(kath2,2));
     }
-
 
     public int getCenterX(){
         return (int) this.getX() + this.getWidth()/2;

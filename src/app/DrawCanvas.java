@@ -1,9 +1,12 @@
 package app;
 import gamefigures.Enemy;
+import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Iterator;
 import javax.swing.JComponent;
 
@@ -27,9 +30,8 @@ public class DrawCanvas extends JComponent{
         g2d.drawImage(Vars.sp_ship_1, at, null);
         g2d.setTransform(oldPos);
 
-
-
-        for (Enemy enemy : Vars.enemyList){
+        ArrayList<Enemy> tempEnemyList = (ArrayList<Enemy>) Vars.enemyList.clone();
+        for (Enemy enemy : tempEnemyList){
             oldPos = g2d.getTransform();
             at = AffineTransform.getTranslateInstance(enemy.getX(), enemy.getY());
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
@@ -37,10 +39,11 @@ public class DrawCanvas extends JComponent{
             g2d.setTransform(oldPos);
         }
 
-        for (Projectile projectile : Vars.projectileList){
+        ArrayList<Projectile> temProjectlieList = (ArrayList<Projectile>) Vars.projectileList.clone();
+        for (Projectile projectile : temProjectlieList){
             oldPos = g2d.getTransform();
             at = AffineTransform.getTranslateInstance(projectile.getX(), projectile.getY());
-            at.rotate(Math.toRadians(projectile.rot),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
+            at.rotate(Math.toRadians(projectile.getOrientation()),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
             g2d.drawImage(projectile.getImage(), at, null);
             g2d.setTransform(oldPos);

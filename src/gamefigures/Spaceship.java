@@ -25,9 +25,9 @@ public class Spaceship extends FlyingObject{
 
     //updates every gametick
     public void update(){
-        if (collision()){
-
-        }
+//        if (collisionProjectileAstereoid()){
+//
+//        }
         fire();
         boost();
         turn();
@@ -112,42 +112,42 @@ public class Spaceship extends FlyingObject{
         }
 
 
-        public boolean collision(){
-        for (Enemy e : Vars.enemyList) {
-            //--Circle center inside of rectangel
-
-            //Vertical inside
-            if (e.posx + e.getWidth()/2 > this.posx && e.posx + e.getWidth()/2 < this.posx + this.getWidth()){
-                //Horizontal inside
-                if (e.posy + e.getHeight()/2 > this.posy && e.posy + e.getHeight() < this.posy + this.getHeight()){
-                    Vars.points -= 10;
-                    return true;
-                }
-            }
-
-            //--Circle in Edge
-            //leftupper
-            if (pythagorean(Math.abs(e.getCenterY() - this.getLeftUpperCornerY()), Math.abs(e.getCenterX() - this.getLeftUpperCornerX())) < e.getRadian()){
-                Vars.points -= 10;
-                return true;
-            }
-            // rightupper
-            if (pythagorean(Math.abs(e.getCenterX() - Vars.spaceship.getRightUpperCornerX()), Math.abs(Vars.spaceship.getRightUpperCornerY() - e.getCenterY())) < e.getRadian()){
-                Vars.points -= 10;
-                return true;
-            }
-            //lowerright
-            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getRightLowerCornerY()), Math.abs(e.getCenterX() - Vars.spaceship.getRightLowerCornerX())) < e.getWidth()/2){
-                Vars.points -= 10;
-                return true;
-            }
-            //lowerleft
-            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getLeftLowerCornerY()), Math.abs(Vars.spaceship.getLeftLowerCornerX() - e.getCenterX())) < e.getWidth()/2){
-                Vars.points -= 10;
-                return true;
-            }
-        }
-        return false;
-    }
+//        public boolean collisionProjectileAstereoid(){
+//        for (Enemy e : Vars.enemyList) {
+//            //--Circle center inside of rectangel
+//
+//            //Vertical inside
+//            if (e.posx + e.getWidth()/2 > this.posx && e.posx + e.getWidth()/2 < this.posx + this.getWidth()){
+//                //Horizontal inside
+//                if (e.posy + e.getHeight()/2 > this.posy && e.posy + e.getHeight() < this.posy + this.getHeight()){
+//                    Vars.points -= 10;
+//                    return true;
+//                }
+//            }
+//
+//            //--Circle in Edge
+//            //leftupper
+//            if (pythagorean(Math.abs(e.getCenterY() - this.getLeftUpperCornerY()), Math.abs(e.getCenterX() - this.getLeftUpperCornerX())) < e.getRadian()){
+//                Vars.points -= 10;
+//                return true;
+//            }
+//            // rightupper
+//            if (pythagorean(Math.abs(e.getCenterX() - Vars.spaceship.getRightUpperCornerX()), Math.abs(Vars.spaceship.getRightUpperCornerY() - e.getCenterY())) < e.getRadian()){
+//                Vars.points -= 10;
+//                return true;
+//            }
+//            //lowerright
+//            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getRightLowerCornerY()), Math.abs(e.getCenterX() - Vars.spaceship.getRightLowerCornerX())) < e.getWidth()/2){
+//                Vars.points -= 10;
+//                return true;
+//            }
+//            //lowerleft
+//            if (pythagorean(Math.abs(e.getCenterY()-Vars.spaceship.getLeftLowerCornerY()), Math.abs(Vars.spaceship.getLeftLowerCornerX() - e.getCenterX())) < e.getWidth()/2){
+//                Vars.points -= 10;
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
 
 }

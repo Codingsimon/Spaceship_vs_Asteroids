@@ -76,12 +76,14 @@ public class Enemy extends FlyingObject{
         return null;
     }
 
+    public int getOrientation(){
+        return 0;
+    }
+
     public  void  update(){
         warp();
-        posy = 310;
-        posx = 250;
-//        posx = posx + xvel;
-//        posy = posy + yvel;
+        posx = posx + xvel;
+        posy = posy + yvel;
     }
 
 }

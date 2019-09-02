@@ -2,6 +2,7 @@ package app;
 
 import javax.swing.JFrame;
 import gamefigures.Enemy;
+import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
 import keylistener.*;
@@ -68,15 +69,16 @@ public class App extends JFrame {
         Vars.spaceship = new Spaceship();
         Vars.sporner = new EnemySporner();
 
-        Vars.sporner.setLevel(0);
-
     }
 
     public static void update(){
+        //Check if Level finished
         if (Vars.sporner.getEnemycount() <= 0){
             Vars.sporner.setLevel(Vars.level);
             Vars.level++;
         }
+
+        //update Gameobjects
         Vars.spaceship.update();
         for (Projectile projectile : Vars.projectileList){
             projectile.update();
@@ -84,6 +86,9 @@ public class App extends JFrame {
         for (Enemy enemy : Vars.enemyList) {
             enemy.update();
         }
+
+        //delete Projectiles
+        Collision.deleteProjectiles();
     }
 
     public static void draw(){

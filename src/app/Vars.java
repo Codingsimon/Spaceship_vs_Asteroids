@@ -1,6 +1,7 @@
 package app;
 
 import gamefigures.Enemy;
+import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
 import keylistener.Wlistener;
@@ -13,6 +14,9 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public class Vars {
     public static double deltaTime;

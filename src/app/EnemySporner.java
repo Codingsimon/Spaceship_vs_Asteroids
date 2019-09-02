@@ -89,4 +89,7 @@ public class EnemySporner {
         return enemycount;
     }
 
+    public void reduceEnemycount(){
+        enemycount--;
+    }
 }
