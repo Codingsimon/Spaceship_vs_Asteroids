@@ -1,6 +1,6 @@
 package app;
 import gamefigures.Enemy;
-import gamefigures.Spaceship;
+import gamefigures.Projectile;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -33,6 +33,15 @@ public class DrawCanvas extends JComponent{
             at = AffineTransform.getTranslateInstance(enemy.getX(), enemy.getY());
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
             g2d.drawImage(enemy.getImage(), at, null);
+            g2d.setTransform(oldPos);
+        }
+
+        for (Projectile projectile : Vars.projectileList){
+            oldPos = g2d.getTransform();
+            at = AffineTransform.getTranslateInstance(projectile.getX(), projectile.getY());
+            at.rotate(Math.toRadians(projectile.rot),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
+            at.scale(Vars.getScalfactor(), Vars.getScalfactor());
+            g2d.drawImage(projectile.getImage(), at, null);
             g2d.setTransform(oldPos);
         }
 

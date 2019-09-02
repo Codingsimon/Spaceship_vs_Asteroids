@@ -1,6 +1,7 @@
 package app;
 
 import gamefigures.Enemy;
+import gamefigures.Projectile;
 import gamefigures.Spaceship;
 
 import javax.imageio.ImageIO;
@@ -24,7 +25,7 @@ public class Vars {
     public static EnemySporner sporner;
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
-
+    public static ArrayList<Projectile> projectileList = new ArrayList<>();
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;
@@ -43,6 +44,7 @@ public class Vars {
     public static BufferedImage sp_asteroid_red_medium = null;
     public static BufferedImage sp_asteroid_red_small = null;
 
+    public static BufferedImage sp_shoot_small = null;
 
     public Vars(){
         //load images
@@ -63,6 +65,8 @@ public class Vars {
             sp_asteroid_red_big = ImageIO.read(new File("sprites/sp_0003_Farbton_Sättigung-2.png"));
             sp_asteroid_red_medium = ImageIO.read(new File("sprites/sp_0004_Farbton_Sättigung-2-Kopie.png"));
             sp_asteroid_red_small = ImageIO.read(new File("sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
+
+            sp_shoot_small = ImageIO.read(new File("sprites/sp_0010_shoot.png"));
 
         } catch (IOException e) {
             System.out.println("Bilder konnten nicht geladen werden. Da Pfad passt nu ned!!!");
