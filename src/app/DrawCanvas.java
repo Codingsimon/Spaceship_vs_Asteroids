@@ -1,5 +1,6 @@
 package app;
 import gamefigures.Enemy;
+import gamefigures.Spaceship;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
