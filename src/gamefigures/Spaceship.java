@@ -1,6 +1,5 @@
 package gamefigures;
 
-import app.GameListener;
 import app.Vars;
 
 import java.awt.image.BufferedImage;
@@ -10,7 +9,7 @@ public class Spaceship extends FlyingObject{
     int upgradeLevel = 1;
 
     // position/velocity/acceleration variables
-    double accel = 1;
+    double accel = 0.3;
 
     //rotation/orientation variables
     double rotvel = 45;
@@ -49,17 +48,20 @@ public class Spaceship extends FlyingObject{
 
 
     //modifies orientation every update
+    private int turncounter = 0;
     private void turn(){
-        if(Vars.gameListener.getLeftState()){
-            orientation -= rotvel;
-            Vars.gameListener.resetLeftState();
-        }
-        if(Vars.gameListener.getRightState()){
-            orientation += rotvel;
-            Vars.gameListener.resetRightState();
-        }
-        if(orientation < 0) {
-            orientation += 360;
+        turncounter++;
+        turncounter = turncounter%15;
+        if(turncounter == 0) {
+            if (Vars.aListener.getLeftState()) {
+                orientation -= rotvel;
+            }
+            if (Vars.dListener.getRightState()) {
+                orientation += rotvel;
+            }
+            if (orientation < 0) {
+                orientation += 360;
+            }
         }
         orientation = orientation%360;
     }
@@ -67,28 +69,29 @@ public class Spaceship extends FlyingObject{
     //xvel, yvel, orientation -> posx posy
     private void boost(){
         //boost
-        if(Vars.gameListener.getUpState()){
+        if(Vars.wListener.getUpState()){
             xvel += (Math.sin(Math.PI*2*(orientation/360)) * accel);
             yvel += (Math.cos(Math.PI*2*(orientation/360)) * accel);
-            Vars.gameListener.resetUpState();
         }
         //reverse
-        if(Vars.gameListener.getDownState()){
+        if(Vars.sListener.getDownState()){
             xvel -= (Math.sin(Math.PI*2*(orientation/360)) * accel);
             yvel -= (Math.cos(Math.PI*2*(orientation/360)) * accel);
-            Vars.gameListener.resetDownState();
         }
         //flip coordinate system
         posx += xvel;
         posy -= yvel;
     }
-
+    private int firecounter = 0;
     private void fire(){
         //fire!!1
-        if(Vars.gameListener.getFireState()){
-            Projectile projectile = new Projectile();
-            Vars.projectileList.add(projectile);
-            Vars.gameListener.resetFireState();
+        firecounter++;
+        firecounter = firecounter%20;
+        if (firecounter == 0)   {
+            if(Vars.spaceListener.getFireState()) {
+                Projectile projectile = new Projectile();
+                Vars.projectileList.add(projectile);
+            }
         }
     }
 

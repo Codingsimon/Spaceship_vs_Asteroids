@@ -6,13 +6,13 @@ import java.awt.image.BufferedImage;
 
 public class Projectile extends FlyingObject {
     public int rot;
+    private  double shotspeed = 5;
     public Projectile(){
-        System.out.println("shoot");
         posx = Vars.spaceship.getX();
         posy = Vars.spaceship.getY();
         rot = Vars.spaceship.getOrientation();
-        xvel = Math.sin(Math.toRadians(rot));
-        yvel = Math.cos(Math.toRadians(rot));
+        xvel = Math.sin(Math.toRadians(rot)) * shotspeed;
+        yvel = Math.cos(Math.toRadians(rot)) * shotspeed;
     }
 
     public BufferedImage getImage(){

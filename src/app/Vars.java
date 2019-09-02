@@ -3,7 +3,11 @@ package app;
 import gamefigures.Enemy;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
-
+import keylistener.Wlistener;
+import keylistener.Alistener;
+import keylistener.Slistener;
+import keylistener.Dlistener;
+import keylistener.SPACElistener;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -20,7 +24,13 @@ public class Vars {
     public static int gameHeight = 900;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
-    public static GameListener gameListener;
+
+    public static Wlistener wListener;
+    public static Alistener aListener;
+    public static Slistener sListener;
+    public static Dlistener dListener;
+    public static SPACElistener spaceListener;
+
     public static int level = 0;
     public static EnemySporner sporner;
 

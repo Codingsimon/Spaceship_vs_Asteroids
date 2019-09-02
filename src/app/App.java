@@ -1,10 +1,10 @@
 package app;
 
 import javax.swing.JFrame;
-
 import gamefigures.Enemy;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
+import keylistener.*;
 
 
 @SuppressWarnings("serial")
@@ -51,8 +51,18 @@ public class App extends JFrame {
         Vars.canvas = new DrawCanvas();
         Vars.canvas.setVisible(true);
         Vars.window.getContentPane().add(Vars.canvas);
-        Vars.gameListener = new GameListener();
-        Vars.window.addKeyListener(Vars.gameListener);
+        Vars.wListener = new Wlistener();
+        Vars.aListener = new Alistener();
+        Vars.sListener = new Slistener();
+        Vars.dListener = new Dlistener();
+        Vars.spaceListener = new SPACElistener();
+
+        Vars.window.addKeyListener(Vars.wListener);
+        Vars.window.addKeyListener(Vars.aListener);
+        Vars.window.addKeyListener(Vars.sListener);
+        Vars.window.addKeyListener(Vars.dListener);
+        Vars.window.addKeyListener(Vars.spaceListener);
+
 
         //Game objects
         Vars.spaceship = new Spaceship();
