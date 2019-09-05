@@ -10,6 +10,7 @@ public class Spaceship extends FlyingObject {
     private double orientation;
     private int firecounter;
     private int firerate;
+    private int maxspeed;
 
     //constructor TODO
     public Spaceship() {
@@ -24,6 +25,7 @@ public class Spaceship extends FlyingObject {
         orientation = 0;
         //fire at most every <firerate>th frame
         firerate = 15;
+        maxspeed = 4;
     }
 
     //updates every gametick
@@ -74,6 +76,12 @@ public class Spaceship extends FlyingObject {
             yvel -= (Math.cos(Math.PI*2*(orientation/360)) * accel);
         }
         //flip coordinate system
+        if(xvel > maxspeed) {
+            xvel = maxspeed;
+        }
+        if(yvel > maxspeed) {
+            yvel = maxspeed;
+        }
         posx += xvel;
         posy -= yvel;
     }
