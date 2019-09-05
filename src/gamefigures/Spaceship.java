@@ -8,7 +8,7 @@ public class Spaceship extends FlyingObject {
     private double accel;
     private double rotvel;
     private double orientation;
-    private int firecounter;
+    public int firecounter;
     private int firerate;
     private double maxspeed;
 
@@ -24,7 +24,8 @@ public class Spaceship extends FlyingObject {
         rotvel = 45;
         orientation = 0;
         //fire at most every <firerate>th frame
-        firerate = 15;
+        firerate = 25;
+        firecounter = firerate;
         maxspeed = 2.5;
     }
 
@@ -88,7 +89,6 @@ public class Spaceship extends FlyingObject {
         if(yvel < -maxspeed) {
             yvel = -maxspeed;
         }
-
         posx += xvel;
         posy -= yvel;
     }
@@ -96,11 +96,11 @@ public class Spaceship extends FlyingObject {
     private void fire() {
         //fire function
         firecounter++;
-        firecounter = firecounter%firerate;
-        if (firecounter == 0)   {
+        if (firecounter >= firerate)   {
             if(Vars.spaceListener.getFireState()) {
                 Projectile projectile = new Projectile();
                 Vars.projectileList.add(projectile);
+                firecounter = 0;
             }
         }
     }
