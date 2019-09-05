@@ -8,27 +8,11 @@ import java.awt.event.KeyListener;
 public class Slistener implements KeyListener {
 
     //initialize variables for controls
-    private boolean up = false;
     private boolean down = false;
-    private boolean left = false;
-    private boolean right = false;
-    private boolean fire = false;
 
     //return state of the pressed keys
-    public boolean getUpState(){
-        return up;
-    }
     public boolean getDownState(){
         return down;
-    }
-    public boolean getLeftState(){
-        return left;
-    }
-    public boolean getRightState(){
-        return right;
-    }
-    public boolean getFireState(){
-        return fire;
     }
 
     //sets respective-pressed-key state to true on keypress
@@ -44,6 +28,8 @@ public class Slistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        down = false;
+        if (keyEvent.getKeyCode() == KeyEvent.VK_S){
+            down = false;
+        }
     }
 }

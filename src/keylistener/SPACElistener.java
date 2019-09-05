@@ -8,25 +8,9 @@ import java.awt.event.KeyListener;
 public class SPACElistener implements KeyListener {
 
     //initialize variables for controls
-    private boolean up = false;
-    private boolean down = false;
-    private boolean left = false;
-    private boolean right = false;
     private boolean fire = false;
 
     //return state of the pressed keys
-    public boolean getUpState(){
-        return up;
-    }
-    public boolean getDownState(){
-        return down;
-    }
-    public boolean getLeftState(){
-        return left;
-    }
-    public boolean getRightState(){
-        return right;
-    }
     public boolean getFireState(){
         return fire;
     }
@@ -44,6 +28,8 @@ public class SPACElistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        fire = false;
+        if (keyEvent.getKeyCode() == KeyEvent.VK_SPACE){
+            fire = false;
+        }
     }
 }
