@@ -32,7 +32,9 @@ public class App extends JFrame {
             if (Vars.deltaTime >= 1){
                 update();
                 Vars.deltaTime --;
+
                 draw();
+                System.out.println("bingo");
             }
 
             if (System.currentTimeMillis() - Vars.currentTime > 1000){
@@ -68,6 +70,7 @@ public class App extends JFrame {
         //Game objects
         Vars.spaceship = new Spaceship();
         Vars.sporner = new EnemySporner();
+        Vars.level = 10;
 
     }
 

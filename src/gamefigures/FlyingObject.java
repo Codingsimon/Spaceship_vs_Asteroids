@@ -14,7 +14,7 @@ public abstract class FlyingObject {
     double orientation;
 
     double randomNumber(int min, int max){
-        double speed = ThreadLocalRandom.current().nextInt(min, max + 1) / 10;
+        double speed = ThreadLocalRandom.current().nextInt(min, max + 1);
         if (speed == 0){
             return randomNumber(min,max);
         }

@@ -58,7 +58,7 @@ public class EnemySporner {
     }
     
     private void levelUp(){
-        speedlevel += 10;
+        speedlevel += 5;
         small += 1;
         medium += 1;
         large += 1;

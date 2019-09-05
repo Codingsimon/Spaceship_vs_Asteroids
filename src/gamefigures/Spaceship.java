@@ -88,7 +88,7 @@ public class Spaceship extends FlyingObject{
     private void fire(){
         //fire!!1
         firecounter++;
-        firecounter = firecounter%20;
+        firecounter = firecounter%4;
         if (firecounter == 0)   {
             if(Vars.spaceListener.getFireState()) {
                 Projectile projectile = new Projectile();
