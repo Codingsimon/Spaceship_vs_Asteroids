@@ -7,13 +7,38 @@ import java.awt.image.BufferedImage;
 
 public class Projectile extends FlyingObject{
     public int rot;
+    public FlyingObject creator;
     private  double shotspeed = 5;
-    public Projectile(){
-        posx = Vars.spaceship.getX();
-        posy = Vars.spaceship.getY();
-        rot = Vars.spaceship.getOrientation();
-        xvel = Math.sin(Math.toRadians(rot)) * shotspeed;
-        yvel = Math.cos(Math.toRadians(rot)) * shotspeed;
+    public Projectile(FlyingObject creator){
+        if (creator instanceof Spaceship){
+            posx = Vars.spaceship.getX();
+            posy = Vars.spaceship.getY();
+            rot = Vars.spaceship.getOrientation();
+            xvel = Math.sin(Math.toRadians(rot)) * shotspeed;
+            yvel = Math.cos(Math.toRadians(rot)) * shotspeed;
+        } else {
+            posx = creator.getX() - this.getWidth()/2;
+            posy = creator.getY() - this.getHeight()/2;
+            double xlength = Vars.spaceship.getY() - creator.getY() * 100;
+            double ylenght = Vars.spaceship.getX() - creator.getX() * 100;
+            double vektorLength = pythagorean(xlength, ylenght);
+
+
+            //sin calculation
+            rot =  (int)Math.toDegrees(Math.asin(ylenght / vektorLength));
+
+            if (xlength > 0 && ylenght > 0){
+                rot += 90;
+            }
+            if (xlength > 0 && ylenght < 0){
+                rot -= 90;
+            }
+
+            xvel =  (Vars.spaceship.getX() - creator.getX())  / vektorLength;
+            yvel =  (creator.getY() - Vars.spaceship.getY()) / vektorLength;
+
+        }
+
     }
 
     public int getOrientation(){

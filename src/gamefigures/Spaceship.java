@@ -98,7 +98,7 @@ public class Spaceship extends FlyingObject {
         firecounter++;
         if (firecounter >= firerate)   {
             if(Vars.spaceListener.getFireState()) {
-                Projectile projectile = new Projectile();
+                Projectile projectile = new Projectile(this);
                 Vars.projectileList.add(projectile);
                 firecounter = 0;
             }

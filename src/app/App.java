@@ -20,7 +20,6 @@ public class App extends JFrame {
 
     public static void gameloop(){
         double ns = 1000_000_000 / FPS;
-        Vars.sporner.setLevel(0);
 
         while(true){
             Vars.previousTime = Vars.currentTime;
@@ -34,7 +33,6 @@ public class App extends JFrame {
                 Vars.deltaTime --;
 
                 draw();
-                System.out.println("bingo");
             }
 
             if (System.currentTimeMillis() - Vars.currentTime > 1000){
@@ -70,15 +68,14 @@ public class App extends JFrame {
         //Game objects
         Vars.spaceship = new Spaceship();
         Vars.sporner = new EnemySporner();
-        Vars.level = 10;
 
     }
 
     public static void update(){
         //Check if Level finished
-        if (Vars.sporner.getEnemycount() <= 0){
-            Vars.sporner.setLevel(Vars.level);
-            Vars.level++;
+        if (Vars.enemyList.isEmpty()){
+            Vars.sporner.levelUp();
+            Vars.sporner.newLevelSetup();
         }
 
         //update Gameobjects

@@ -12,8 +12,11 @@ public class Enemy extends FlyingObject{
     EnemyType type;
     AsteroidColor color;
     AsteroidSize size;
+    long clock = 0;
 
     public Enemy(EnemyType type, int speedlevel){
+
+        clock = System.currentTimeMillis();
 
         xvel = randomNumber(-speedlevel, speedlevel);
         yvel = randomNumber(-speedlevel, speedlevel);
@@ -24,8 +27,10 @@ public class Enemy extends FlyingObject{
     }
 
     public Enemy(EnemyType type, AsteroidSize size, int speedlevel){
-        xvel = randomNumber(-speedlevel, speedlevel);
-        yvel = randomNumber(-speedlevel, speedlevel);
+        clock = System.currentTimeMillis();
+
+        xvel = randomNumber(-speedlevel, speedlevel)/6;
+        yvel = randomNumber(-speedlevel, speedlevel)/6;
 
         if (type == EnemyType.UFO){
             createUFO();
@@ -56,23 +61,28 @@ public class Enemy extends FlyingObject{
 }
 
     public BufferedImage getImage(){
-        switch (color){
-            case BROWN : switch (size){
-                case LARGE : return Vars.sp_asteroid_brown_big;
-                case MEDIUM: return Vars.sp_asteroid_brown_medium;
-                case SMALL: return Vars.sp_asteroid_brown_small;
+        if (type == EnemyType.ASTEREOID){
+            switch (color){
+                case BROWN : switch (size){
+                    case LARGE : return Vars.sp_asteroid_brown_big;
+                    case MEDIUM: return Vars.sp_asteroid_brown_medium;
+                    case SMALL: return Vars.sp_asteroid_brown_small;
+                }
+                case GREEN : switch (size){
+                    case LARGE : return Vars.sp_asteroid_green_big;
+                    case MEDIUM: return Vars.sp_asteroid_green_medium;
+                    case SMALL: return Vars.sp_asteroid_green_small;
+                }
+                case RED : switch (size){
+                    case LARGE : return Vars.sp_asteroid_red_big;
+                    case MEDIUM: return Vars.sp_asteroid_red_medium;
+                    case SMALL: return Vars.sp_asteroid_red_small;
+                }
             }
-            case GREEN : switch (size){
-                case LARGE : return Vars.sp_asteroid_green_big;
-                case MEDIUM: return Vars.sp_asteroid_green_medium;
-                case SMALL: return Vars.sp_asteroid_green_small;
-            }
-            case RED : switch (size){
-                case LARGE : return Vars.sp_asteroid_red_big;
-                case MEDIUM: return Vars.sp_asteroid_red_medium;
-                case SMALL: return Vars.sp_asteroid_red_small;
-            }
+        } else {
+            return Vars.sp_ufo;
         }
+
         return null;
     }
 
@@ -84,6 +94,21 @@ public class Enemy extends FlyingObject{
         warp();
         posx = posx + xvel;
         posy = posy + yvel;
+        if (this.type == EnemyType.ASTEREOID && this.type == EnemyType.UFO){
+            if (((System.currentTimeMillis() - clock) / 1000) > 3){
+                clock = System.currentTimeMillis();
+                System.out.println("bumm");
+                fire();
+            }
+        }
     }
+
+    private void fire() {
+        //fire function
+        Projectile projectile = new Projectile(this);
+        Vars.projectileList.add(projectile);
+    }
+
+
 
 }

@@ -43,14 +43,17 @@ public class DrawCanvas extends JComponent{
         for (Projectile projectile : temProjectlieList){
             oldPos = g2d.getTransform();
             at = AffineTransform.getTranslateInstance(projectile.getX(), projectile.getY());
-            at.rotate(Math.toRadians(projectile.getOrientation()),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
+
+//            g2d.setColor(Color.BLUE);
+//            g2d.drawRect(projectile.getX(), projectile.getY(),300,300);
+
+            at.rotate(Math.toRadians(projectile.getOrientation()),projectile.getWidth()/2, projectile.getHeight()/2);
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
             g2d.drawImage(projectile.getImage(), at, null);
             g2d.setTransform(oldPos);
         }
 
-        g2d.setColor(Color.BLUE);
-        g2d.drawRect(0, 0,300,300);
+
 
         repaint();
     }

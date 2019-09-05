@@ -59,6 +59,8 @@ public class Vars {
     public static BufferedImage sp_asteroid_red_medium = null;
     public static BufferedImage sp_asteroid_red_small = null;
 
+    public static BufferedImage sp_ufo = null;
+
     public static BufferedImage sp_shoot_small = null;
 
     public Vars(){
@@ -82,6 +84,8 @@ public class Vars {
             sp_asteroid_red_small = ImageIO.read(new File("sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
 
             sp_shoot_small = ImageIO.read(new File("sprites/sp_0010_shoot.png"));
+
+            sp_ufo = ImageIO.read(new File("sprites/sp_0011_UFO.png"));
 
         } catch (IOException e) {
             System.out.println("Bilder konnten nicht geladen werden. Da Pfad passt nu ned!!!");
