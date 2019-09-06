@@ -41,6 +41,7 @@ public class Vars {
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
     public static ArrayList<Projectile> projectileList = new ArrayList<>();
+    public static ArrayList<Projectile> projectilesToDelete = new ArrayList<>();
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;

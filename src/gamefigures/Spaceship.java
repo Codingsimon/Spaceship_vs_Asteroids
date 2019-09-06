@@ -21,7 +21,7 @@ public class Spaceship extends FlyingObject {
         orientation = 0;
         upgradeLevel = 1;
         accel = 0.3;
-        rotvel = 45;
+        rotvel = 30;
         orientation = 0;
         //fire at most every <firerate>th frame
         firerate = 25;

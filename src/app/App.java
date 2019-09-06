@@ -88,7 +88,7 @@ public class App extends JFrame {
         }
 
         //delete Projectiles
-        Collision.deleteProjectiles();
+        Collision.update();
     }
 
     public static void draw(){

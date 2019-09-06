@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 public class Projectile extends FlyingObject{
     public int rot;
+    private int projectilelife = 2;
     public FlyingObject creator;
     private  double shotspeed = 5;
     public Projectile(FlyingObject creator){
@@ -19,8 +20,8 @@ public class Projectile extends FlyingObject{
         } else {
             posx = creator.getX() - this.getWidth()/2;
             posy = creator.getY() - this.getHeight()/2;
-            double xlength = Vars.spaceship.getY() - creator.getY() * 100;
-            double ylenght = Vars.spaceship.getX() - creator.getX() * 100;
+            double xlength = Vars.spaceship.getY() - creator.getY();
+            double ylenght = Vars.spaceship.getX() - creator.getX();
             double vektorLength = pythagorean(xlength, ylenght);
 
 
@@ -34,11 +35,15 @@ public class Projectile extends FlyingObject{
                 rot -= 90;
             }
 
-            xvel =  (Vars.spaceship.getX() - creator.getX())  / vektorLength;
-            yvel =  (creator.getY() - Vars.spaceship.getY()) / vektorLength;
+            xvel =  (Vars.spaceship.getX() - creator.getX())  / vektorLength * shotspeed;
+            yvel =  (creator.getY() - Vars.spaceship.getY()) / vektorLength * shotspeed;
 
         }
 
+    }
+
+    private void loseLife(){
+        projectilelife -= 1;
     }
 
     public int getOrientation(){
@@ -50,11 +55,40 @@ public class Projectile extends FlyingObject{
         }
 
     public void update(){
+        if(projectilelife <= 0){
+            Vars.projectilesToDelete.add(this);
+        }
         Collision.collisionProjectileAstereoid( Vars.enemyList, this);
         warp();
         posx += xvel;
         posy -= yvel;
     }
+
+
+    void warp(){
+        if (Vars.gameHeight <= getY()){
+            posy -= Vars.gameHeight;
+            loseLife();
+            return;
+        }
+        if (Vars.gameWidth <= getX()){
+            posx -= Vars.gameWidth;
+            loseLife();
+            return;
+        }
+        if (0 >= getY()){
+            posy += Vars.gameHeight;
+            loseLife();
+            return;
+        }
+        if (0 >= getX()){
+            posx += Vars.gameWidth;
+            loseLife();
+            return;
+        }
+    }
+
+
 
 //    public Enemy collisionProjectileAstereoid(){
 //        for (Enemy e : Vars.enemyList) {

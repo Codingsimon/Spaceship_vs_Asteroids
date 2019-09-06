@@ -27,7 +27,7 @@ public class DrawCanvas extends JComponent{
         AffineTransform at = AffineTransform.getTranslateInstance(Vars.spaceship.getX(), Vars.spaceship.getY());
         at.rotate(Math.toRadians(Vars.spaceship.getOrientation()),Vars.spaceship.getWidth()/2, Vars.spaceship.getHeight()/2);
         at.scale(Vars.getScalfactor(), Vars.getScalfactor());
-        g2d.drawImage(Vars.sp_ship_1, at, null);
+        g2d.drawImage(Vars.spaceship.getImage(), at, null);
         g2d.setTransform(oldPos);
 
         ArrayList<Enemy> tempEnemyList = (ArrayList<Enemy>) Vars.enemyList.clone();

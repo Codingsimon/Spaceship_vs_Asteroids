@@ -48,15 +48,19 @@ public abstract class FlyingObject {
     void warp(){
         if (Vars.gameHeight <= getY()){
             posy -= Vars.gameHeight;
+            return;
         }
         if (Vars.gameWidth <= getX()){
             posx -= Vars.gameWidth;
+            return;
         }
         if (0 >= getY()){
             posy += Vars.gameHeight;
+            return;
         }
         if (0 >= getX()){
             posx += Vars.gameWidth;
+            return;
         }
     }
 
