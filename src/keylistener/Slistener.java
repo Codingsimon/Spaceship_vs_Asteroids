@@ -17,7 +17,7 @@ public class Slistener implements KeyListener {
 
     //sets respective-pressed-key state to true on keypress
     public void keyPressed(KeyEvent key){
-        if (key.getKeyCode() == KeyEvent.VK_S){
+        if (key.getKeyCode() == KeyEvent.VK_DOWN){
             down = true;
         }
     }
@@ -28,7 +28,7 @@ public class Slistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_S){
+        if (keyEvent.getKeyCode() == KeyEvent.VK_DOWN){
             down = false;
         }
     }

@@ -21,7 +21,7 @@ public class App extends JFrame {
     public static void gameloop(){
         double ns = 1000_000_000 / FPS;
 
-        while(true){
+        while(Vars.gameRunning){
             Vars.previousTime = Vars.currentTime;
             Vars.currentTime = System.nanoTime();
 

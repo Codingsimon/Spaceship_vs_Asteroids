@@ -11,16 +11,27 @@ public class EnemySporner {
     private int small = 1;
     private int medium = 0;
     private int large = 0;
-    private int speedlevel = 1;
+    private static int speedlevel = 1;
     private int[][] levelList = new int[50][4]; //ufo, small, medium, large
 
     public EnemySporner(){
         setEnemycount();
         newLevelSetup();
 
+        int levelDecreaser = 0;
         for (int i = 1; i < 50; i++) {
-            for (int j = 0; j < i; j++) {
+            //fill per Level
+           if (i % 2 == 0){
+               levelDecreaser += 1;
+           }
+            for (int j = 0; j < i -levelDecreaser; j++) {
                 int type = generateRandomInt(levelList[0].length);
+
+                //Stop enemy Type for lower level
+                while (type == 0 && i < 5 || type == 2 && i < 3 || type == 3 && i < 4){
+                    type = generateRandomInt(levelList[0].length);
+                }
+
                 levelList[i][type] += 1;
             }
         }
@@ -34,6 +45,7 @@ public class EnemySporner {
     
     public void levelUp(){
         Vars.level += 1;
+        System.out.println(Vars.level);
         speedlevel += 1;
         setEnemycount();
         newLevelSetup();
@@ -57,7 +69,13 @@ public class EnemySporner {
             Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.LARGE, speedlevel);
             Vars.enemyList.add(enemy);
         }
+
     }
+
+    public static int getSpeedlevel(){
+        return speedlevel;
+    }
+
 
     private void setEnemycount(){
         enemycount = Vars.level;

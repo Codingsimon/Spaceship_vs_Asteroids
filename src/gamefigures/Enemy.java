@@ -15,6 +15,7 @@ public class Enemy extends FlyingObject{
     long clock = 0;
 
     public Enemy(EnemyType type, int speedlevel){
+        startPostion();
 
         clock = System.currentTimeMillis();
 
@@ -23,10 +24,11 @@ public class Enemy extends FlyingObject{
         if (type == EnemyType.UFO){
             this.type = type;
         }
-        System.out.println("Asteroid needs a Size");
     }
 
     public Enemy(EnemyType type, AsteroidSize size, int speedlevel){
+        startPostion();
+
         clock = System.currentTimeMillis();
 
         xvel = randomNumber(-speedlevel, speedlevel)/6;
@@ -38,9 +40,20 @@ public class Enemy extends FlyingObject{
         if (type == EnemyType.ASTEREOID){
             createAsteroid(size);
         }
-        setStartPositionBorder();
     }
 
+
+    private void startPostion(){
+//        posy = 370;
+//        posx = 370;
+        posx = randomNumber(0, Vars.gameWidth);
+
+        if (randomNumber(0,1) == 0){
+            posy = 0;
+        } else {
+            posy = Vars.gameHeight;
+        }
+    }
 
     private void createUFO(){
         this.type = EnemyType.UFO;
@@ -97,7 +110,6 @@ public class Enemy extends FlyingObject{
         if (this.type == EnemyType.UFO){
             if (((System.currentTimeMillis() - clock) / 1000) > 3){
                 clock = System.currentTimeMillis();
-                System.out.println("bumm");
                 fire();
             }
         }
@@ -109,6 +121,19 @@ public class Enemy extends FlyingObject{
         Vars.projectileList.add(projectile);
     }
 
+    public EnemyType getType(){
+        return type;
+    }
 
+    public AsteroidSize getSize(){
+        return size;
+    }
 
+    public AsteroidColor getColor(){
+        return color;
+    }
+
+    public void setColor(AsteroidColor color){
+        this.color = color;
+    }
 }

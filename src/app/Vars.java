@@ -10,22 +10,23 @@ import keylistener.Slistener;
 import keylistener.Dlistener;
 import keylistener.SPACElistener;
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.text.DecimalFormat;
+import java.util.*;
 import java.util.List;
 
 public class Vars {
+    public static boolean gameRunning = true;
     public static double deltaTime;
     public static double currentTime;
     public static double previousTime;
     public static Spaceship spaceship;
     public static Window window;
-    public static int gameWidth = 900;
-    public static int gameHeight = 900;
+    public static int gameWidth = 1900;
+    public static int gameHeight = 1070;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
 
@@ -38,6 +39,7 @@ public class Vars {
     public static int level = 0;
     public static EnemySporner sporner;
     public static int points = 0;
+    public static int relativePoints = 0;
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
     public static ArrayList<Projectile> projectileList = new ArrayList<>();
@@ -61,8 +63,12 @@ public class Vars {
     public static BufferedImage sp_asteroid_red_small = null;
 
     public static BufferedImage sp_ufo = null;
+    public static Image sp_fire = null;
+    public static int firecounter = 0;
 
     public static BufferedImage sp_shoot_small = null;
+
+    public static Font pixelfont = null;
 
     public Vars(){
         //load images
@@ -87,9 +93,22 @@ public class Vars {
             sp_shoot_small = ImageIO.read(new File("sprites/sp_0010_shoot.png"));
 
             sp_ufo = ImageIO.read(new File("sprites/sp_0011_UFO.png"));
+            sp_fire = Toolkit.getDefaultToolkit().createImage("sprites/fire.gif");
+
 
         } catch (IOException e) {
             System.out.println("Bilder konnten nicht geladen werden. Da Pfad passt nu ned!!!");
+        }
+
+
+        try {
+            pixelfont = Font.createFont(Font.TRUETYPE_FONT,new File("font/Connection.otf")).deriveFont(25f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("font/Connection.otf")));
+        } catch (FontFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -107,5 +126,11 @@ public class Vars {
             case 4: return sp_ship_4;
         }
         return null;
+    }
+
+    public static String getFormatedPoints(){
+        DecimalFormat df = (DecimalFormat)DecimalFormat.getInstance(Locale.GERMAN);
+        df.applyPattern( "#,###,##0" );
+        return df.format(points);
     }
 }

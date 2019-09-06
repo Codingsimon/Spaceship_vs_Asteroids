@@ -25,7 +25,7 @@ public class Alistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_A){
+        if (keyEvent.getKeyCode() == KeyEvent.VK_LEFT){
             left = true;
         }
     }

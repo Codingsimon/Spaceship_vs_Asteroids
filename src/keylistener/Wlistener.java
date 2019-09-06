@@ -1,6 +1,8 @@
 package keylistener;
 //import key listening shit
 
+import app.Vars;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -17,7 +19,8 @@ public class Wlistener implements KeyListener {
 
     //sets respective-pressed-key state to true on keypress
     public void keyPressed(KeyEvent key){
-        if (key.getKeyCode() == KeyEvent.VK_W){
+        if (key.getKeyCode() == KeyEvent.VK_UP){
+            Vars.firecounter = 1500;
             up = true;
         }
     }
@@ -28,7 +31,7 @@ public class Wlistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_W){
+        if (keyEvent.getKeyCode() == KeyEvent.VK_UP){
             up = false;
         }
     }

@@ -25,7 +25,7 @@ public class Dlistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_D){
+        if (keyEvent.getKeyCode() == KeyEvent.VK_RIGHT){
             right = true;
         }
     }

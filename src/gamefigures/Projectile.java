@@ -58,7 +58,7 @@ public class Projectile extends FlyingObject{
         if(projectilelife <= 0){
             Vars.projectilesToDelete.add(this);
         }
-        Collision.collisionProjectileAstereoid( Vars.enemyList, this);
+        Collision.collisionProjectileAstereoid( this);
         warp();
         posx += xvel;
         posy -= yvel;

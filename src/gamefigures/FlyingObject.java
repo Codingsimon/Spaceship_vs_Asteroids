@@ -4,6 +4,7 @@ import app.Vars;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class FlyingObject {
@@ -19,11 +20,6 @@ public abstract class FlyingObject {
             return randomNumber(min,max);
         }
         return speed;
-    }
-
-    void setStartPositionBorder(){
-//        this.posx = Math.random() * Vars.gameWidth;
-//        this.posy = Math.random() * Vars.gameHeight;
     }
 
     public abstract BufferedImage getImage();
@@ -62,6 +58,16 @@ public abstract class FlyingObject {
             posx += Vars.gameWidth;
             return;
         }
+    }
+
+    public void setPos(int posx, int posy){
+        this.posx = posx;
+        this.posy = posy;
+    }
+
+    public static int generateRandomInt(int max){
+        Random random = new Random();
+        return random.nextInt(max);
     }
 
     public abstract int getOrientation();

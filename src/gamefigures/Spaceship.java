@@ -1,4 +1,5 @@
 package gamefigures;
+import app.Collision;
 import app.Vars;
 import java.awt.image.BufferedImage;
 
@@ -31,6 +32,7 @@ public class Spaceship extends FlyingObject {
 
     //updates every gametick
     public void update() {
+        Collision.collisionSpaceshipEnemy();
         fire();
         boost();
         turn();
@@ -119,4 +121,5 @@ public class Spaceship extends FlyingObject {
         }
         return null;
     }
+
 }
