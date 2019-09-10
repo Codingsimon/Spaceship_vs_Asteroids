@@ -49,7 +49,7 @@ public class Enemy extends FlyingObject{
         posx = randomNumber(0, Vars.gameWidth);
 
         if (randomNumber(0,1) == 0){
-            posy = 0;
+            posy = 30;
         } else {
             posy = Vars.gameHeight;
         }
@@ -105,11 +105,11 @@ public class Enemy extends FlyingObject{
 
     public  void  update(){
         warp();
-        posx = 410;
-        posy = 200;
+//        posx = 453;
+//        posy = 200;
 
-//        posx = posx + xvel;
-//        posy = posy + yvel;
+        posx = posx + xvel;
+        posy = posy + yvel;
         if (this.type == EnemyType.UFO){
             if (((System.currentTimeMillis() - clock) / 1000) > 3){
                 clock = System.currentTimeMillis();

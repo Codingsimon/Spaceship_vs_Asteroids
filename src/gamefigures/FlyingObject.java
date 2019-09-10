@@ -27,10 +27,16 @@ public abstract class FlyingObject {
     public abstract void update();
 
     public int getWidth(){
+        if (getImage() == null){
+            return 20;
+        }
         return (int)((double)getImage().getWidth() * Vars.getScalfactor());
     }
 
     public int getHeight(){
+        if (getImage() == null){
+            return 20;
+        }
         return (int)((double)getImage().getHeight() * Vars.getScalfactor());
     }
 
@@ -42,20 +48,29 @@ public abstract class FlyingObject {
     }
 
     void warp(){
-        if (Vars.gameHeight <= getY()){
+        //bottom
+        if (Vars.gameHeight + this.getHeight() < getY()){
             posy -= Vars.gameHeight;
+            posx = Vars.gameWidth - posx;
             return;
         }
-        if (Vars.gameWidth <= getX()){
+        //right
+        if (Vars.gameWidth + this.getWidth() < getX()){
             posx -= Vars.gameWidth;
+            posy = Vars.gameHeight - posy;
             return;
         }
-        if (0 >= getY()){
+        //top
+        if (getY() < 0 - this.getHeight()){
             posy += Vars.gameHeight;
+            posx = Vars.gameWidth - posx;
             return;
         }
-        if (0 >= getX()){
+        //left
+        if (getX() < 0 - this.getWidth()){
+            System.out.println("bingo");
             posx += Vars.gameWidth;
+            posy = Vars.gameHeight - posy;
             return;
         }
     }

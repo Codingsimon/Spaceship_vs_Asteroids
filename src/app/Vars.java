@@ -1,6 +1,7 @@
 package app;
 
 import gamefigures.Enemy;
+import gamefigures.Explosion;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
 import keylistener.UpListener;
@@ -27,6 +28,7 @@ public class Vars {
     public static int gameHeight = 800;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
+    public static int live = 4;
 
     public static UpListener wListener;
     public static LeftListener aListener;
@@ -43,6 +45,8 @@ public class Vars {
     public static ArrayList<Projectile> projectileList = new ArrayList<>();
     public static ArrayList<Projectile> projectilesToDelete = new ArrayList<>();
     public static ArrayList<Enemy> enemiesToDelete = new ArrayList<>();
+    public static ArrayList<Explosion> explosionList = new ArrayList<>();
+    public static ArrayList<Explosion> explosionsToDeletList = new ArrayList<>();
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;
@@ -63,9 +67,11 @@ public class Vars {
 
     public static BufferedImage sp_ufo = null;
     public static Image sp_fire = null;
+    public static Image sp_explosion = null;
     public static int firecounter = 0;
 
     public static BufferedImage sp_shoot_small = null;
+    public static BufferedImage sp_heart = null;
 
     public static Font pixelfont = null;
 
@@ -90,8 +96,10 @@ public class Vars {
             sp_asteroid_red_small = ImageIO.read(new File("sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
 
             sp_shoot_small = ImageIO.read(new File("sprites/sp_0010_shoot.png"));
+            sp_heart = ImageIO.read(new File("sprites/sp_0012_life.png"));
 
             sp_ufo = ImageIO.read(new File("sprites/sp_0011_UFO.png"));
+
             sp_fire = Toolkit.getDefaultToolkit().createImage("sprites/fire.gif");
 
 

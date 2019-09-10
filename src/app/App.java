@@ -2,6 +2,7 @@ package app;
 
 import javax.swing.JFrame;
 import gamefigures.Enemy;
+import gamefigures.Explosion;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
 import keylistener.*;
@@ -20,10 +21,10 @@ public class App extends JFrame {
     public static void gameloop(){
         double ns = 1000_000_000 / FPS;
 
+
         while(Vars.gameRunning){
             Vars.previousTime = Vars.currentTime;
             Vars.currentTime = System.nanoTime();
-
 
             Vars.deltaTime += (Vars.currentTime - Vars.previousTime) / ns;
 
@@ -89,8 +90,25 @@ public class App extends JFrame {
             enemy.update();
         }
 
+        //find Explosions to delete
+        for (Explosion x : Vars.explosionList) {
+            if (x.readyToDelete()){
+                Vars.explosionsToDeletList.add(x);
+            }
+        }
+
+        //Clear Explosion List
+        for (Explosion x : Vars.explosionsToDeletList){
+            Vars.explosionList.remove(x);
+        }
+
         //detect for collisions
-        Collision.update();
+        Collision. update();
+
+        //check if lifes are 0
+        if (Vars.live <= 0){
+            Vars.gameRunning = false;
+        }
     }
 
     public static void draw(){

@@ -1,5 +1,6 @@
 package app;
 import gamefigures.Enemy;
+import gamefigures.Explosion;
 import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 
@@ -11,6 +12,7 @@ import java.util.Iterator;
 import javax.swing.JComponent;
 
 import static app.Collision.*;
+import static app.Vars.live;
 
 @SuppressWarnings("serial")
 public class DrawCanvas extends JComponent{
@@ -27,10 +29,6 @@ public class DrawCanvas extends JComponent{
 
             //draw Spaceship
             oldPos = g2d.getTransform();
-            g2d.setColor(Color.BLUE);
-            g2d.drawOval(Vars.spaceship.getX(),Vars.spaceship.getY(),Vars.spaceship.getWidth(), Vars.spaceship.getHeight());
-
-//            g2d.translate(2, 2);
             AffineTransform at = AffineTransform.getTranslateInstance(Vars.spaceship.getX(), Vars.spaceship.getY());
             at.rotate(Math.toRadians(Vars.spaceship.getOrientation()), Vars.spaceship.getWidth() / 2, Vars.spaceship.getHeight() / 2);
             at.scale(Vars.getScalfactor(), Vars.getScalfactor());
@@ -47,8 +45,8 @@ public class DrawCanvas extends JComponent{
             for (Enemy enemy : tempEnemyList) {
                 oldPos = g2d.getTransform();
 
-                g2d.setColor(Color.BLUE);
-                g2d.drawOval(enemy.getX(),enemy.getY(), enemy.getWidth(), enemy.getHeight());
+                g2d.setColor(Color.RED);
+                g2d.drawRect(enemy.getCenterX(),enemy.getCenterY(), enemy.getWidth(), enemy.getHeight());
 
                 at = AffineTransform.getTranslateInstance(enemy.getX(), enemy.getY());
                 at.scale(Vars.getScalfactor(), Vars.getScalfactor());
@@ -57,25 +55,38 @@ public class DrawCanvas extends JComponent{
             }
 
 
+
+
             //draw Projectile
             ArrayList<Projectile> temProjectlieList = (ArrayList<Projectile>) Vars.projectileList.clone();
             for (Projectile projectile : temProjectlieList) {
                 oldPos = g2d.getTransform();
-
-                if (Collision.twoRadians > pythagorean(distancex, distancey)){
-                    g2d.setColor(Color.RED);
-                } else {
-                    g2d.setColor(Color.BLUE);
-                }
-
-                g2d.drawRect(projectile.getX(), projectile.getY(), -distancex, -distancey);
-
 
                 AffineTransform at2 = AffineTransform.getTranslateInstance(projectile.getX(), projectile.getY());
 //                at.translate(-5, 0);
                 at2.scale(Vars.getScalfactor(), Vars.getScalfactor());
                 at2.rotate(Math.toRadians(projectile.getOrientation()), 1, 1);
                 g2d.drawImage(projectile.getImage(), at2, null);
+                g2d.setTransform(oldPos);
+            }
+
+            //draw Explosion
+            ArrayList<Explosion> tempExplosion = (ArrayList<Explosion>) Vars.explosionList.clone();
+            for (Explosion x : tempExplosion) {
+                oldPos = g2d.getTransform();
+                AffineTransform at2 = AffineTransform.getTranslateInstance(x.getX(), x.getY());
+                at2.scale(Vars.getScalfactor(), Vars.getScalfactor());
+                g2d.drawImage(x.getImage(), at2, null);
+                g2d.setTransform(oldPos);
+            }
+
+
+            //draw Hearts
+            for (int i = 0; i < Vars.live; i++) {
+                oldPos = g2d.getTransform();
+                AffineTransform at2 = AffineTransform.getTranslateInstance((Vars.gameWidth - i * 40) - 80, Vars.gameHeight - 90);
+                at2.scale(Vars.getScalfactor() - 1, Vars.getScalfactor() - 1);
+                g2d.drawImage(Vars.sp_heart, at2, null);
                 g2d.setTransform(oldPos);
             }
 

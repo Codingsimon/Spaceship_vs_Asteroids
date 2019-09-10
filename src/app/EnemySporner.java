@@ -54,7 +54,7 @@ public class EnemySporner {
     public void newLevelSetup(){
         Vars.enemyList.clear();
 
-        Enemy enemytest = new Enemy(EnemyType.ASTEREOID, AsteroidSize.SMALL, 1);
+        Enemy enemytest = new Enemy(EnemyType.UFO, 1);
         Vars.enemyList.add(enemytest);
 
 //        for (int i = 0; i < levelList[Vars.level][0]; i++) {

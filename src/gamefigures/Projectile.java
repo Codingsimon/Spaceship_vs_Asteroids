@@ -68,23 +68,32 @@ public class Projectile extends FlyingObject{
 
 
     void warp(){
-        if (Vars.gameHeight <= getY()){
+        //bottom
+        if (Vars.gameHeight + this.getHeight() < getY()){
             posy -= Vars.gameHeight;
+            posx = Vars.gameWidth - posx;
             reduceWarpCounter();
             return;
         }
-        if (Vars.gameWidth <= getX()){
+        //right
+        if (Vars.gameWidth + this.getWidth() < getX()){
             posx -= Vars.gameWidth;
+            posy = Vars.gameHeight - posy;
             reduceWarpCounter();
             return;
         }
-        if (0 >= getY()){
+        //top
+        if (getY() < 0 - this.getHeight()){
             posy += Vars.gameHeight;
+            posx = Vars.gameWidth - posx;
             reduceWarpCounter();
             return;
         }
-        if (0 >= getX()){
+        //left
+        if (getX() < 0 - this.getWidth()){
+            System.out.println("bingo");
             posx += Vars.gameWidth;
+            posy = Vars.gameHeight - posy;
             reduceWarpCounter();
             return;
         }

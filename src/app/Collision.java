@@ -4,6 +4,7 @@ import enums.AsteroidColor;
 import enums.AsteroidSize;
 import enums.EnemyType;
 import gamefigures.Enemy;
+import gamefigures.Explosion;
 import gamefigures.Projectile;
 
 import java.util.ArrayList;
@@ -16,7 +17,9 @@ public abstract class Collision {
             int distancey = Math.abs(enemy.getY() - Vars.spaceship.getY());
             int twoRadians = enemy.getWidth()/2 + Vars.spaceship.getWidth()/2;
             if (pythagorean(distancex, distancey) < twoRadians){
+                Vars.enemiesToDelete.add(enemy);
                 subtractPoints(enemy);
+                Vars.live -= 1;
             }
         }
     }
@@ -26,8 +29,8 @@ public abstract class Collision {
         ArrayList<Projectile> tempProjectileList = (ArrayList<Projectile>) Vars.projectileList.clone();
 
         for (Projectile projectile: tempProjectileList){
-            int distancex = Math.abs(projectile.getX() - Vars.spaceship.getX());
-            int distancey = Math.abs(projectile.getY() - Vars.spaceship.getY());
+            int distancex = Math.abs(projectile.getX() - Vars.spaceship.getCenterX());
+            int distancey = Math.abs(projectile.getY() - Vars.spaceship.getCenterY());
             int twoRadians = projectile.getWidth()/2 + Vars.spaceship.getWidth()/2;
 
 //            System.out.println("pyt" + pythagorean(distancex, distancey) + " tworad " + twoRadians);
@@ -44,6 +47,7 @@ public abstract class Collision {
                         Vars.projectilesToDelete.add(projectile);
                     } else {
                         //selfe shot
+                        Vars.live -= 1;
                         Vars.points -= 500;
                         Vars.projectilesToDelete.add(projectile);
                         Vars.spaceship.setUpgradeLevel(Vars.spaceship.getUpgradeLevel() - 1);
@@ -63,14 +67,13 @@ public abstract class Collision {
         ArrayList<Enemy> tempEnemyList = (ArrayList<Enemy>) Vars.enemyList.clone();
 
         for (Enemy enemy: tempEnemyList){
-            distancex = Math.abs(enemy.getX() - projectile.getX());
-            distancey = Math.abs(enemy.getY() - projectile.getY());
+            distancex = Math.abs(enemy.getCenterX() - projectile.getX());
+            distancey = Math.abs(enemy.getCenterY() - projectile.getY());
             twoRadians = enemy.getWidth()/2 + projectile.getWidth()/2;
 
-            System.out.println("pyt" + pythagorean(distancex, distancey) + " tworad " + twoRadians);
+//            System.out.println("pyt" + pythagorean(distancex, distancey) + " tworad " + twoRadians);
 
             if (pythagorean(distancex, distancey) < twoRadians){
-                System.out.println("bumm");
                 if (enemy.getType() == EnemyType.ASTEREOID){
                     collisionProjectileAsteroid(enemy, projectile);
                 }
@@ -83,6 +86,7 @@ public abstract class Collision {
 
 
     private static void collisionProjectileAsteroid(Enemy enemy, Projectile projectile){
+        Vars.explosionList.add(new Explosion(enemy.getCenterX() - enemy.getWidth()/4, enemy.getCenterY()- enemy.getHeight()/4));
         addPoints(enemy);
         shootAsteroid(enemy);
         Vars.projectilesToDelete.add(projectile);
@@ -96,6 +100,7 @@ public abstract class Collision {
                 //do not Delete
                 return;
             } else{
+                Vars.explosionList.add(new Explosion(enemy.getCenterX(), enemy.getCenterY()));
                 addPoints(enemy);
                 Vars.projectilesToDelete.add(projectile);
                 Vars.enemiesToDelete.add(enemy);
@@ -210,10 +215,6 @@ public abstract class Collision {
     }
 
     private static void subtractPoints(Enemy enemy){
-        if (Vars.spaceship.getUpgradeLevel() == 1){
-            Vars.gameRunning = false;
-            return;
-        }
         Vars.spaceship.setUpgradeLevel(Vars.spaceship.getUpgradeLevel() - 1);
         if (enemy.getType() == EnemyType.ASTEREOID){
             switch (enemy.getSize()){
@@ -232,16 +233,19 @@ public abstract class Collision {
     private static void upgradeShip(){
         if (Vars.relativePoints > 10000 && Vars.spaceship.getUpgradeLevel() == 3){
             Vars.spaceship.setUpgradeLevel(4);
+            Vars.live += 2;
             Vars.relativePoints = 0;
             return;
         }
         if (Vars.relativePoints > 3000 && Vars.spaceship.getUpgradeLevel() == 2) {
             Vars.spaceship.setUpgradeLevel(3);
+            Vars.live += 2;
             Vars.relativePoints = 0;
             return;
         }
         if (Vars.relativePoints > 1000 && Vars.spaceship.getUpgradeLevel() == 1) {
             Vars.spaceship.setUpgradeLevel(2);
+            Vars.live += 2;
             Vars.relativePoints = 0;
             return;
         }
