@@ -5,21 +5,18 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 //listener class
-public class Slistener implements KeyListener {
+public class LeftListener implements KeyListener {
 
     //initialize variables for controls
-    private boolean down = false;
+    public boolean left = false;
 
     //return state of the pressed keys
-    public boolean getDownState(){
-        return down;
+    public boolean getLeftState(){
+        return left;
     }
 
     //sets respective-pressed-key state to true on keypress
     public void keyPressed(KeyEvent key){
-        if (key.getKeyCode() == KeyEvent.VK_DOWN){
-            down = true;
-        }
     }
 
     @Override
@@ -28,8 +25,8 @@ public class Slistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_DOWN){
-            down = false;
+        if (keyEvent.getKeyCode() == KeyEvent.VK_LEFT){
+            left = true;
         }
     }
 }

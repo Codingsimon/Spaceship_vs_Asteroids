@@ -20,7 +20,7 @@ public class Spaceship extends FlyingObject {
         xvel = 0;
         yvel = 0;
         orientation = 0;
-        upgradeLevel = 1;
+        upgradeLevel = 4;
         accel = 0.3;
         rotvel = 30;
         orientation = 0;
@@ -32,7 +32,6 @@ public class Spaceship extends FlyingObject {
 
     //updates every gametick
     public void update() {
-        Collision.collisionSpaceshipEnemy();
         fire();
         boost();
         turn();

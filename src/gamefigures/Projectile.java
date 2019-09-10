@@ -7,13 +7,16 @@ import java.awt.image.BufferedImage;
 
 public class Projectile extends FlyingObject{
     public int rot;
-    private int projectilelife = 2;
+    private int warpcounter = 2;
     public FlyingObject creator;
     private  double shotspeed = 5;
     public Projectile(FlyingObject creator){
+        warpcounter = 2;
+        this.creator = creator;
+
         if (creator instanceof Spaceship){
-            posx = Vars.spaceship.getX();
-            posy = Vars.spaceship.getY();
+            posx = Vars.spaceship.getCenterX();
+            posy = Vars.spaceship.getCenterY();
             rot = Vars.spaceship.getOrientation();
             xvel = Math.sin(Math.toRadians(rot)) * shotspeed;
             yvel = Math.cos(Math.toRadians(rot)) * shotspeed;
@@ -42,8 +45,8 @@ public class Projectile extends FlyingObject{
 
     }
 
-    private void loseLife(){
-        projectilelife -= 1;
+    private void reduceWarpCounter(){
+        warpcounter -= 1;
     }
 
     public int getOrientation(){
@@ -55,10 +58,9 @@ public class Projectile extends FlyingObject{
         }
 
     public void update(){
-        if(projectilelife <= 0){
+        if(warpcounter <= 0){
             Vars.projectilesToDelete.add(this);
         }
-        Collision.collisionProjectileAstereoid( this);
         warp();
         posx += xvel;
         posy -= yvel;
@@ -68,29 +70,32 @@ public class Projectile extends FlyingObject{
     void warp(){
         if (Vars.gameHeight <= getY()){
             posy -= Vars.gameHeight;
-            loseLife();
+            reduceWarpCounter();
             return;
         }
         if (Vars.gameWidth <= getX()){
             posx -= Vars.gameWidth;
-            loseLife();
+            reduceWarpCounter();
             return;
         }
         if (0 >= getY()){
             posy += Vars.gameHeight;
-            loseLife();
+            reduceWarpCounter();
             return;
         }
         if (0 >= getX()){
             posx += Vars.gameWidth;
-            loseLife();
+            reduceWarpCounter();
             return;
         }
     }
 
 
+    public int getWarpcounter(){
+        return warpcounter;
+    }
 
-//    public Enemy collisionProjectileAstereoid(){
+//    public Enemy collisionProjectileEnemy(){
 //        for (Enemy e : Vars.enemyList) {
 //
 //            //Vertical inside

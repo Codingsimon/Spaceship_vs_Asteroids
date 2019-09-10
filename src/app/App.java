@@ -2,7 +2,6 @@ package app;
 
 import javax.swing.JFrame;
 import gamefigures.Enemy;
-import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
 import keylistener.*;
@@ -46,16 +45,19 @@ public class App extends JFrame {
         Vars.previousTime = 0;
         Vars.currentTime = System.nanoTime();
 
+        //Game objects
+        Vars.spaceship = new Spaceship();
+        Vars.sporner = new EnemySporner();
 
         //Window setup
         Vars.window = new Window();
-        Vars.canvas = new DrawCanvas();
-        Vars.canvas.setVisible(true);
-        Vars.window.getContentPane().add(Vars.canvas);
-        Vars.wListener = new Wlistener();
-        Vars.aListener = new Alistener();
-        Vars.sListener = new Slistener();
-        Vars.dListener = new Dlistener();
+
+
+        //Listener
+        Vars.wListener = new UpListener();
+        Vars.aListener = new LeftListener();
+        Vars.sListener = new DownListener();
+        Vars.dListener = new RightListener();
         Vars.spaceListener = new SPACElistener();
 
         Vars.window.addKeyListener(Vars.wListener);
@@ -65,10 +67,10 @@ public class App extends JFrame {
         Vars.window.addKeyListener(Vars.spaceListener);
 
 
-        //Game objects
-        Vars.spaceship = new Spaceship();
-        Vars.sporner = new EnemySporner();
-
+        //Canvas Setup
+        Vars.canvas = new DrawCanvas();
+        Vars.canvas.setVisible(true);
+        Vars.window.getContentPane().add(Vars.canvas);
     }
 
     public static void update(){
@@ -87,7 +89,7 @@ public class App extends JFrame {
             enemy.update();
         }
 
-        //delete Projectiles
+        //detect for collisions
         Collision.update();
     }
 

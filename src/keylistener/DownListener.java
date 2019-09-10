@@ -1,27 +1,24 @@
 package keylistener;
 //import key listening shit
 
-import app.Vars;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 //listener class
-public class Wlistener implements KeyListener {
+public class DownListener implements KeyListener {
 
     //initialize variables for controls
-    private boolean up = false;
+    private boolean down = false;
 
     //return state of the pressed keys
-    public boolean getUpState(){
-        return up;
+    public boolean getDownState(){
+        return down;
     }
 
     //sets respective-pressed-key state to true on keypress
     public void keyPressed(KeyEvent key){
-        if (key.getKeyCode() == KeyEvent.VK_UP){
-            Vars.firecounter = 1500;
-            up = true;
+        if (key.getKeyCode() == KeyEvent.VK_DOWN){
+            down = true;
         }
     }
 
@@ -31,8 +28,8 @@ public class Wlistener implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent keyEvent) {
-        if (keyEvent.getKeyCode() == KeyEvent.VK_UP){
-            up = false;
+        if (keyEvent.getKeyCode() == KeyEvent.VK_DOWN){
+            down = false;
         }
     }
 }

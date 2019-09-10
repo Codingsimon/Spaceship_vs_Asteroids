@@ -1,13 +1,12 @@
 package app;
 
 import gamefigures.Enemy;
-import gamefigures.FlyingObject;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
-import keylistener.Wlistener;
-import keylistener.Alistener;
-import keylistener.Slistener;
-import keylistener.Dlistener;
+import keylistener.UpListener;
+import keylistener.LeftListener;
+import keylistener.DownListener;
+import keylistener.RightListener;
 import keylistener.SPACElistener;
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -16,7 +15,6 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
-import java.util.List;
 
 public class Vars {
     public static boolean gameRunning = true;
@@ -25,15 +23,15 @@ public class Vars {
     public static double previousTime;
     public static Spaceship spaceship;
     public static Window window;
-    public static int gameWidth = 1900;
-    public static int gameHeight = 1070;
+    public static int gameWidth = 800;
+    public static int gameHeight = 800;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
 
-    public static Wlistener wListener;
-    public static Alistener aListener;
-    public static Slistener sListener;
-    public static Dlistener dListener;
+    public static UpListener wListener;
+    public static LeftListener aListener;
+    public static DownListener sListener;
+    public static RightListener dListener;
     public static SPACElistener spaceListener;
 
     public static int level = 0;
@@ -44,6 +42,7 @@ public class Vars {
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
     public static ArrayList<Projectile> projectileList = new ArrayList<>();
     public static ArrayList<Projectile> projectilesToDelete = new ArrayList<>();
+    public static ArrayList<Enemy> enemiesToDelete = new ArrayList<>();
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;
