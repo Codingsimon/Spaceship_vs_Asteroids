@@ -67,7 +67,7 @@ public class Projectile extends FlyingObject{
     }
 
 
-    void warp(){
+    public void warp(){
         //bottom
         if (Vars.gameHeight + this.getHeight() < getY()){
             posy -= Vars.gameHeight;

@@ -5,6 +5,7 @@ import gamefigures.Enemy;
 import gamefigures.Explosion;
 import gamefigures.Projectile;
 import gamefigures.Spaceship;
+import gamefigures.items.Item;
 import keylistener.*;
 
 
@@ -89,6 +90,11 @@ public class App extends JFrame {
         for (Enemy enemy : Vars.enemyList) {
             enemy.update();
         }
+        for (Item item : Vars.itemList){
+            item.update();
+        }
+
+
 
         //find Explosions to delete
         for (Explosion x : Vars.explosionList) {

@@ -1,5 +1,6 @@
 package app;
 
+import gamefigures.items.*;
 import gamefigures.Enemy;
 import gamefigures.Explosion;
 import gamefigures.Projectile;
@@ -47,6 +48,8 @@ public class Vars {
     public static ArrayList<Enemy> enemiesToDelete = new ArrayList<>();
     public static ArrayList<Explosion> explosionList = new ArrayList<>();
     public static ArrayList<Explosion> explosionsToDeletList = new ArrayList<>();
+    public static ArrayList<Item> itemList = new ArrayList<>();
+    public static ArrayList<Item> itemToDeleteList = new ArrayList<>();
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;
@@ -64,6 +67,8 @@ public class Vars {
     public static BufferedImage sp_asteroid_red_big = null;
     public static BufferedImage sp_asteroid_red_medium = null;
     public static BufferedImage sp_asteroid_red_small = null;
+
+    public static BufferedImage sp_item_shield = null;
 
     public static BufferedImage sp_ufo = null;
     public static Image sp_fire = null;
@@ -101,6 +106,8 @@ public class Vars {
             sp_ufo = ImageIO.read(new File("sprites/sp_0011_UFO.png"));
 
             sp_fire = Toolkit.getDefaultToolkit().createImage("sprites/fire.gif");
+
+            sp_item_shield = ImageIO.read(new File("sprites/sp_00018_item_shield.png"));
 
 
         } catch (IOException e) {

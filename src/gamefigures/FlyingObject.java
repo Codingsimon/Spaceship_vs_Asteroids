@@ -47,7 +47,7 @@ public abstract class FlyingObject {
         return (int)posy;
     }
 
-    void warp(){
+    public void warp(){
         //bottom
         if (Vars.gameHeight + this.getHeight() < getY()){
             posy -= Vars.gameHeight;

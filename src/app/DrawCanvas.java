@@ -3,6 +3,7 @@ import gamefigures.Enemy;
 import gamefigures.Explosion;
 import gamefigures.FlyingObject;
 import gamefigures.Projectile;
+import gamefigures.items.Item;
 
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -54,7 +55,17 @@ public class DrawCanvas extends JComponent{
                 g2d.setTransform(oldPos);
             }
 
-
+            //draw Projectile
+            ArrayList<Item> tempItemList = (ArrayList<Item>) Vars.itemList.clone();
+            for (Item item : tempItemList) {
+                oldPos = g2d.getTransform();
+                AffineTransform at2 = AffineTransform.getTranslateInstance(item.getX(), item.getY());
+//                at.translate(-5, 0);
+                at2.scale(Vars.getScalfactor(), Vars.getScalfactor());
+                at2.rotate(Math.toRadians(item.getOrientation()), 1, 1);
+                g2d.drawImage(item.getImage(), at2, null);
+                g2d.setTransform(oldPos);
+            }
 
 
             //draw Projectile
@@ -79,6 +90,8 @@ public class DrawCanvas extends JComponent{
                 g2d.drawImage(x.getImage(), at2, null);
                 g2d.setTransform(oldPos);
             }
+
+            //draw Item
 
 
             //draw Hearts
