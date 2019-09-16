@@ -1,6 +1,7 @@
 package app;
 
-import javax.swing.JFrame;
+import javax.swing.*;
+
 import gamefigures.Enemy;
 import gamefigures.Explosion;
 import gamefigures.Projectile;
@@ -8,51 +9,74 @@ import gamefigures.Spaceship;
 import gamefigures.items.Item;
 import keylistener.*;
 
+import java.awt.*;
+
+import static app.Vars.listWriter;
+
 
 @SuppressWarnings("serial")
 public class App extends JFrame {
     static final double FPS = 60.0;
 
     public static void main(String[] args) throws Exception {
-        new Vars();
+            init();
+    }
+
+    public static void init(){
         setup();
         gameloop();
+        stop();
     }
 
     public static void gameloop(){
         double ns = 1000_000_000 / FPS;
 
+        int updates = 0;
+        int frames = 0;
+        long timer = System.currentTimeMillis();
 
         while(Vars.gameRunning){
-            Vars.previousTime = Vars.currentTime;
             Vars.currentTime = System.nanoTime();
-
             Vars.deltaTime += (Vars.currentTime - Vars.previousTime) / ns;
+            Vars.previousTime = Vars.currentTime;
+
 
             if (Vars.deltaTime >= 1){
                 update();
-                Vars.deltaTime --;
-
                 draw();
+                Vars.deltaTime --;
+                frames++;
             }
 
-            if (System.currentTimeMillis() - Vars.currentTime > 1000){
-                Vars.currentTime += 1000;
-            }
+// draw Framerate
+//            if (System.currentTimeMillis() - timer > 1000){
+//                timer += 1000;
+//                System.out.println("Fps " + frames);
+//                updates = 0;
+//                frames = 0;
+//            }
         }
+
+
     }
 
     public static void setup(){
+        new Vars();
+
         //Set Frame Vars
-        Vars.previousTime = 0;
-        Vars.currentTime = System.nanoTime();
+        Vars.previousTime = System.nanoTime();
+        Vars.guiManager = new GuiManager();
+        Vars.listWriter = new ListWriter();
+
 
         //Game objects
         Vars.spaceship = new Spaceship();
         Vars.sporner = new EnemySporner();
 
-        //Window setup
-        Vars.window = new Window();
+        //Collision Objects
+        Vars.spaceshipCollision = new SpaceshipCollision();
+        Vars.enemyCollision = new EnemyCollision();
+        Vars.gameManager = new GameManager();
 
 
         //Listener
@@ -62,17 +86,12 @@ public class App extends JFrame {
         Vars.dListener = new RightListener();
         Vars.spaceListener = new SPACElistener();
 
-        Vars.window.addKeyListener(Vars.wListener);
-        Vars.window.addKeyListener(Vars.aListener);
-        Vars.window.addKeyListener(Vars.sListener);
-        Vars.window.addKeyListener(Vars.dListener);
-        Vars.window.addKeyListener(Vars.spaceListener);
+        Vars.frame.addKeyListener(Vars.wListener);
+        Vars.frame.addKeyListener(Vars.aListener);
+        Vars.frame.addKeyListener(Vars.sListener);
+        Vars.frame.addKeyListener(Vars.dListener);
+        Vars.frame.addKeyListener(Vars.spaceListener);
 
-
-        //Canvas Setup
-        Vars.canvas = new DrawCanvas();
-        Vars.canvas.setVisible(true);
-        Vars.window.getContentPane().add(Vars.canvas);
     }
 
     public static void update(){
@@ -108,16 +127,21 @@ public class App extends JFrame {
             Vars.explosionList.remove(x);
         }
 
-        //detect for collisions
-        Collision. update();
+        //Gamemanager
+        Vars.gameManager.update();
 
-        //check if lifes are 0
-        if (Vars.live <= 0){
-            Vars.gameRunning = false;
-        }
+        //detect for collisions
+        Vars.spaceshipCollision.update();
+        Vars.enemyCollision.update();
+
     }
 
     public static void draw(){
         Vars.canvas.repaint();
+    }
+
+    public static void stop(){
+        Vars.guiManager.showTextfield();
+        draw();
     }
 }

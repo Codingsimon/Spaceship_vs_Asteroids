@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Spaceship_vs_Asteroids:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/app/Vars.java" line="117" />
+    <bookmark url="file://$PROJECT_DIR$/src/app/Vars.java" line="131" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="085cea1d-c834-4a8d-a30e-2d4f1dffc72c" name="Default Changelist" comment="" />
@@ -16,30 +21,26 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5606936">
+    <splitter split-orientation="horizontal" split-proportion="0.864184">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/keylistener/UpListener.java">
+            <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+                <state relative-caret-position="246">
+                  <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
                   <folding>
-                    <element signature="e#346#347#0" expanded="true" />
-                    <element signature="e#371#372#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
+            <entry file="file://$PROJECT_DIR$/src/app/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="722">
-                  <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="255">
+                  <caret line="93" selection-start-line="93" selection-end-line="93" />
                 </state>
               </provider>
             </entry>
@@ -47,8 +48,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/Spaceship.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+                <state relative-caret-position="262">
+                  <caret line="102" selection-start-line="102" selection-end-line="102" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -56,32 +57,20 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="614">
-                  <caret line="995" column="12" selection-start-line="995" selection-start-column="12" selection-end-line="995" selection-end-column="12" />
+                <state relative-caret-position="344">
+                  <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
+            <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Class.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-451">
-                  <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gamefigures/Projectile.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+                <state relative-caret-position="199">
+                  <caret line="2718" selection-start-line="2718" selection-end-line="2719" />
                 </state>
               </provider>
             </entry>
@@ -89,58 +78,68 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/FlyingObject.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="447">
-                  <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+                <state relative-caret-position="195">
+                  <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
                   <folding>
-                    <element signature="e#1011#1012#0" expanded="true" />
-                    <element signature="e#1034#1035#0" expanded="true" />
-                    <element signature="e#1066#1067#0" expanded="true" />
-                    <element signature="e#2160#2161#0" expanded="true" />
-                    <element signature="e#2231#2232#0" expanded="true" />
-                    <element signature="e#2261#2262#0" expanded="true" />
-                    <element signature="e#2321#2322#0" expanded="true" />
-                    <element signature="e#2351#2352#0" expanded="true" />
-                    <element signature="e#2412#2413#0" expanded="true" />
-                    <element signature="e#2441#2442#0" expanded="true" />
-                    <element signature="e#2486#2487#0" expanded="true" />
-                    <element signature="e#2525#2526#0" expanded="true" />
-                    <element signature="e#2572#2573#0" expanded="true" />
-                    <element signature="e#2611#2612#0" expanded="true" />
-                    <element signature="e#2659#2660#0" expanded="true" />
-                    <element signature="e#2699#2700#0" expanded="true" />
-                    <element signature="e#2746#2747#0" expanded="true" />
-                    <element signature="e#2786#2787#0" expanded="true" />
-                    <element signature="e#2834#2835#0" expanded="true" />
-                    <element signature="e#2873#2874#0" expanded="true" />
-                    <element signature="e#2920#2921#0" expanded="true" />
-                    <element signature="e#2959#2960#0" expanded="true" />
-                    <element signature="e#3007#3008#0" expanded="true" />
-                    <element signature="e#3047#3048#0" expanded="true" />
-                    <element signature="e#3094#3095#0" expanded="true" />
-                    <element signature="e#3134#3135#0" expanded="true" />
-                    <element signature="e#3182#3183#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/app/Collision.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="396">
-                  <caret line="26" column="54" lean-forward="true" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#989#990#0" expanded="true" />
+                    <element signature="e#1021#1022#0" expanded="true" />
+                    <element signature="e#1044#1045#0" expanded="true" />
+                    <element signature="e#1076#1077#0" expanded="true" />
+                    <element signature="e#2237#2238#0" expanded="true" />
+                    <element signature="e#2297#2298#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
+            <entry file="file://$PROJECT_DIR$/src/keylistener/RightListener.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+                <state relative-caret-position="102">
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
+                  <folding>
+                    <element signature="e#336#337#0" expanded="true" />
+                    <element signature="e#364#365#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/keylistener/DownListener.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="e#334#335#0" expanded="true" />
+                    <element signature="e#361#362#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/keylistener/LeftListener.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="e#333#334#0" expanded="true" />
+                    <element signature="e#360#361#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/keylistener/UpListener.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                  <folding>
+                    <element signature="e#346#347#0" expanded="true" />
+                    <element signature="e#371#372#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -150,37 +149,22 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/gamefigures/Projectile.java">
+            <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="100" selection-start-line="100" selection-end-line="100" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/sprites/sp_0010_shoot.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/app/App.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-561">
-                  <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+                <state relative-caret-position="867">
+                  <caret line="55" selection-start-line="55" selection-start-column="2" selection-end-line="56" selection-end-column="40" />
                   <folding>
-                    <element signature="e#2808#2809#0" expanded="true" />
-                    <element signature="e#2845#2846#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/imageio/ImageIO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
+                <state relative-caret-position="20587">
+                  <caret line="1307" column="18" selection-start-line="1307" selection-start-column="18" selection-end-line="1307" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -188,23 +172,84 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/gamefigures/Explosion.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+                <state relative-caret-position="136">
+                  <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#944#945#0" expanded="true" />
-                    <element signature="e#995#996#0" expanded="true" />
-                    <element signature="e#1032#1033#0" expanded="true" />
-                    <element signature="e#1088#1089#0" expanded="true" />
-                    <element signature="e#1120#1121#0" expanded="true" />
-                    <element signature="e#1162#1163#0" expanded="true" />
-                    <element signature="e#1196#1197#0" expanded="true" />
-                    <element signature="e#1238#1239#0" expanded="true" />
-                    <element signature="e#1326#1327#0" expanded="true" />
-                    <element signature="e#627#628#0" expanded="true" />
-                    <element signature="e#655#656#0" expanded="true" />
-                    <element signature="e#679#680#0" expanded="true" />
-                    <element signature="e#706#707#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="356">
+                  <caret line="67" selection-start-line="67" selection-end-line="67" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/GuiManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="178">
+                  <caret line="76" column="82" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="82" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/Frame.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" selection-start-line="16" selection-end-line="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/app/ListWriter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="709">
+                  <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/PointEntry.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" selection-start-line="9" selection-end-line="9" />
+                  <folding>
+                    <element signature="e#264#265#0" expanded="true" />
+                    <element signature="e#309#310#0" expanded="true" />
+                    <element signature="e#397#398#0" expanded="true" />
+                    <element signature="e#424#425#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/app/GameManager.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1496">
+                  <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#1035#1036#0" expanded="true" />
+                    <element signature="e#1064#1065#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -226,11 +271,18 @@
     <findStrings>
       <find>shoo</find>
       <find>system</find>
-      <find>system.out</find>
       <find>Asterosid</find>
       <find>level</find>
       <find>todele</find>
       <find>bumm</find>
+      <find>relativepoint</find>
+      <find>upgradeLevel</find>
+      <find>setUpgradeLevel</find>
+      <find>system.out.print</find>
+      <find>listwrit</find>
+      <find>gui</find>
+      <find>draw</find>
+      <find>system.out</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -246,23 +298,31 @@
         <option value="$PROJECT_DIR$/src/keylistener/Slistener.java" />
         <option value="$PROJECT_DIR$/src/keylistener/Wlistener.java" />
         <option value="$PROJECT_DIR$/src/keylistener/UpListener.java" />
-        <option value="$PROJECT_DIR$/src/gamefigures/Spaceship.java" />
+        <option value="$PROJECT_DIR$/src/app/Pointmanager.java" />
+        <option value="$PROJECT_DIR$/src/app/Collision.java" />
+        <option value="$PROJECT_DIR$/src/app/SpaceshipCollision.java" />
+        <option value="$PROJECT_DIR$/src/app/EnemyCollision.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/FlyingObject.java" />
         <option value="$PROJECT_DIR$/src/gamefigures/Projectile.java" />
-        <option value="$PROJECT_DIR$/src/gamefigures/Explosion.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/Spaceship.java" />
         <option value="$PROJECT_DIR$/src/gamefigures/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/app/Window.java" />
+        <option value="$PROJECT_DIR$/src/app/Frame.java" />
+        <option value="$PROJECT_DIR$/src/app/PointEntry.java" />
         <option value="$PROJECT_DIR$/src/app/EnemySporner.java" />
-        <option value="$PROJECT_DIR$/src/app/Vars.java" />
+        <option value="$PROJECT_DIR$/src/gamefigures/Explosion.java" />
         <option value="$PROJECT_DIR$/src/app/DrawCanvas.java" />
         <option value="$PROJECT_DIR$/src/app/App.java" />
-        <option value="$PROJECT_DIR$/src/gamefigures/FlyingObject.java" />
-        <option value="$PROJECT_DIR$/src/app/Collision.java" />
+        <option value="$PROJECT_DIR$/src/app/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/app/ListWriter.java" />
+        <option value="$PROJECT_DIR$/src/app/GuiManager.java" />
+        <option value="$PROJECT_DIR$/src/app/Vars.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="109" />
-    <option name="y" value="-8" />
-    <option name="width" value="1676" />
+    <option name="x" value="711" />
+    <option name="width" value="1216" />
     <option name="height" value="1167" />
   </component>
   <component name="ProjectView">
@@ -270,19 +330,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Spaceship_vs_Asteroids" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spaceship_vs_Asteroids" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Spaceship_vs_Asteroids" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Spaceship_vs_Asteroids" type="462c0819:PsiDirectoryNode" />
-              <item name="sprites" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Spaceship_vs_Asteroids" type="b2602c69:ProjectViewProjectNode" />
@@ -299,32 +352,35 @@
               <item name="Spaceship_vs_Asteroids" type="b2602c69:ProjectViewProjectNode" />
               <item name="Spaceship_vs_Asteroids" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gamefigures" type="462c0819:PsiDirectoryNode" />
+              <item name="sprites" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sprites" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sprites" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Simon.DESKTOP-GBJGB1M\Desktop\Spaceship_vs_Asteroids\sprites" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Simon.DESKTOP-GBJGB1M\Desktop\Spaceship_vs_Asteroids\sprites" />
       <recent name="C:\Users\Simon.DESKTOP-GBJGB1M\Desktop\Spaceship_vs_Asteroids" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Simon.DESKTOP-GBJGB1M\Desktop\Spaceship_vs_Asteroids\src" />
+      <recent name="C:\Users\Simon.DESKTOP-GBJGB1M\Desktop\Spaceship_vs_Asteroids\sprites" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -378,12 +434,23 @@
       <workItem from="1568135932677" duration="53000" />
       <workItem from="1568136280940" duration="766000" />
       <workItem from="1568137111934" duration="47000" />
-      <workItem from="1568137314036" duration="12980000" />
+      <workItem from="1568137314036" duration="14159000" />
+      <workItem from="1568197298321" duration="3385000" />
+      <workItem from="1568203551593" duration="7832000" />
+      <workItem from="1568283578066" duration="12200000" />
+      <workItem from="1568322596804" duration="261000" />
+      <workItem from="1568370754605" duration="4548000" />
+      <workItem from="1568468115035" duration="11215000" />
+      <workItem from="1568480786640" duration="1071000" />
+      <workItem from="1568491502061" duration="1297000" />
+      <workItem from="1568545265854" duration="5527000" />
+      <workItem from="1568562635488" duration="16230000" />
+      <workItem from="1568628908170" duration="4722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85247000" />
+    <option name="totallyTimeSpent" value="154714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,9 +463,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17004265" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12793177" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -406,16 +472,16 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32981783" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48827294" visible="true" weight="0.30393097" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6050107" weight="0.37488016" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48827294" weight="0.39309683" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5410448" weight="0.20901246" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.32981783" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49840087" weight="0.32981783" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5117271" side_tool="true" weight="0.20901246" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49307036" weight="0.15723874" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.45895523" side_tool="true" weight="0.42473635" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49307036" weight="0.1553212" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32981783" />
       <window_info anchor="bottom" id="Floobits" order="13" />
@@ -468,97 +534,42 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/GameManager.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/GuiManager.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/app/Collision.java</url>
-          <line>137</line>
-          <properties class="app.Collision">
+          <url>file://$PROJECT_DIR$/src/app/GuiManager.java</url>
+          <line>74</line>
+          <properties method="actionPerformed">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamefigures/MovingItem.java" />
-    <entry file="file://$PROJECT_DIR$/src/gamefigures/SquareItems.java" />
-    <entry file="file://$PROJECT_DIR$/src/app/GameListener.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15929">
-          <caret line="995" column="12" selection-start-line="995" selection-start-column="12" selection-end-line="995" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="1073" column="24" selection-start-line="1073" selection-start-column="24" selection-end-line="1073" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/enums/EnemyType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/font/Connection.otf">
-      <provider selected="true" editor-type-id="fontseditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/enums/AsteroidColor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0004_Farbton_Sättigung-2-Kopie.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0000_Farbton_Sättigung-1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0002_Farbton_Sättigung-1-Kopie.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0006_Astereoid_big.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0007_Astereoid_medium.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0012_life.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0013_ship_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0017_Ebene-0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0016_ship_4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0015_ship_3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/fire.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0014_ship_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0000_Farbton_Sättigung-1.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0002_Farbton_Sättigung-1-Kopie.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0006_Astereoid_big.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0007_Astereoid_medium.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0012_life.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0013_ship_1.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0017_Ebene-0.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0016_ship_4.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0015_ship_3.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/fire.gif" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0014_ship_2.png" />
     <entry file="file://$PROJECT_DIR$/src/keylistener/SPACElistener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -569,22 +580,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/keylistener/DownListener.java">
+    <entry file="file://$PROJECT_DIR$/out/production/Spaceship_vs_Asteroids/app/App.class">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png" />
+    <entry file="file://$PROJECT_DIR$/sprites/sp_0010_shoot.png" />
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15929">
+          <caret line="995" column="12" selection-start-line="995" selection-start-column="12" selection-end-line="995" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Collision.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#358#359#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/keylistener/LeftListener.java">
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="2108">
+          <caret line="141" column="1" selection-start-line="141" selection-start-column="1" selection-end-line="141" selection-end-column="1" />
           <folding>
-            <element signature="e#357#358#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#3396#3397#0" expanded="true" />
+            <element signature="e#3423#3424#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -596,40 +623,127 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/items/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="669">
+          <caret line="1101" column="75" lean-forward="true" selection-start-line="1101" selection-start-column="75" selection-end-line="1101" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/items/Shield.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+          <folding>
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sprites/sp_00018_item_shield.png" />
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/java/awt/EventDispatchThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9758">
+          <caret line="619" column="18" selection-start-line="619" selection-start-column="18" selection-end-line="619" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/SpaceshipCollision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/EnemyCollision.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Spaceship_vs_Asteroids_HighscoreList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/Projectile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="29" column="41" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sprites/sp_0013_ship_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/keylistener/RightListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="102">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/keylistener/DownListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#334#335#0" expanded="true" />
+            <element signature="e#361#362#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/keylistener/LeftListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#333#334#0" expanded="true" />
             <element signature="e#360#361#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sprites/sp_0010_shoot.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Spaceship_vs_Asteroids/app/App.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamefigures/Projectile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/keylistener/UpListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="153">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#346#347#0" expanded="true" />
             <element signature="e#371#372#0" expanded="true" />
@@ -637,134 +751,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/util/ArrayList.java">
+    <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="995" column="12" selection-start-line="995" selection-start-column="12" selection-end-line="995" selection-end-column="12" />
+        <state relative-caret-position="867">
+          <caret line="55" selection-start-line="55" selection-start-column="2" selection-end-line="56" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/imageio/ImageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20587">
+          <caret line="1307" column="18" selection-start-line="1307" selection-start-column="18" selection-end-line="1307" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gamefigures/Explosion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1326#1327#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamefigures/Enemy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-451">
-          <caret line="66" column="47" selection-start-line="66" selection-start-column="47" selection-end-line="66" selection-end-column="47" />
+        <state relative-caret-position="136">
+          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/EnemySporner.java">
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/NumberFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="60" column="56" lean-forward="true" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+        <state relative-caret-position="356">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/PointEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gamefigures/Spaceship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        <state relative-caret-position="262">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
+    <entry file="file://$PROJECT_DIR$/src/gamefigures/FlyingObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+        <state relative-caret-position="195">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding>
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1021#1022#0" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#2237#2238#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state relative-caret-position="255">
+          <caret line="93" selection-start-line="93" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="100" column="29" lean-forward="true" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
           <folding>
-            <element signature="e#2808#2809#0" expanded="true" />
-            <element signature="e#2845#2846#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/GuiManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="76" column="82" selection-start-line="76" selection-start-column="82" selection-end-line="76" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/ListWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/DrawCanvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gamefigures/FlyingObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="e#1011#1012#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#2160#2161#0" expanded="true" />
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2261#2262#0" expanded="true" />
-            <element signature="e#2321#2322#0" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2412#2413#0" expanded="true" />
-            <element signature="e#2441#2442#0" expanded="true" />
-            <element signature="e#2486#2487#0" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#2572#2573#0" expanded="true" />
-            <element signature="e#2611#2612#0" expanded="true" />
-            <element signature="e#2659#2660#0" expanded="true" />
-            <element signature="e#2699#2700#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-            <element signature="e#2786#2787#0" expanded="true" />
-            <element signature="e#2834#2835#0" expanded="true" />
-            <element signature="e#2873#2874#0" expanded="true" />
-            <element signature="e#2920#2921#0" expanded="true" />
-            <element signature="e#2959#2960#0" expanded="true" />
-            <element signature="e#3007#3008#0" expanded="true" />
-            <element signature="e#3047#3048#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3134#3135#0" expanded="true" />
-            <element signature="e#3182#3183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/Collision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="54" lean-forward="true" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="246">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="2718" selection-start-line="2718" selection-end-line="2719" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/Vars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -773,11 +901,20 @@
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+              <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
+              <type id="artifact" />
+            </show-content>
+          </artifact-editor>
+          <last-edited>Spaceship_vs_Asteroids:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

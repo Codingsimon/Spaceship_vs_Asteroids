@@ -21,7 +21,7 @@ public class Explosion {
 
     public Explosion(int posx, int posy){
         try {
-             tempImage= ImageIO.read(new File("sprites/Explosion_small.gif"));
+             tempImage= ImageIO.read(new File("src/sprites/Explosion_small.gif"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -34,7 +34,7 @@ public class Explosion {
         this.posy = posy - getHeight()/2;
 
 
-        image = Toolkit.getDefaultToolkit().createImage("sprites/Explosion_small.gif");
+        image = Toolkit.getDefaultToolkit().createImage("src/sprites/Explosion_small.gif");
     }
 
 
@@ -69,7 +69,6 @@ public class Explosion {
     public boolean readyToDelete(){
         currentTime = System.currentTimeMillis();
         deltaTime = currentTime - startTime;
-        System.out.println(deltaTime/1000);
         if (deltaTime/1000 > 2){
             return true;
         } else {

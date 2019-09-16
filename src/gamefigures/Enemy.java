@@ -105,8 +105,8 @@ public class Enemy extends FlyingObject{
 
     public  void  update(){
         warp();
-//        posx = 453;
-//        posy = 200;
+//        posx = 200;
+//        posy = 300;
 
         posx = posx + xvel;
         posy = posy + yvel;

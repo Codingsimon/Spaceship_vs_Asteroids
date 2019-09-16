@@ -5,7 +5,6 @@ import java.awt.image.BufferedImage;
 
 public class Spaceship extends FlyingObject {
 
-    private int upgradeLevel;
     private double accel;
     private double rotvel;
     private double orientation;
@@ -20,7 +19,6 @@ public class Spaceship extends FlyingObject {
         xvel = 0;
         yvel = 0;
         orientation = 0;
-        upgradeLevel = 4;
         accel = 0.3;
         rotvel = 30;
         orientation = 0;
@@ -41,12 +39,6 @@ public class Spaceship extends FlyingObject {
     //get spaceship data
     public int getOrientation(){
         return (int) orientation;
-    }
-    public int getUpgradeLevel(){
-        return upgradeLevel;
-    }
-    public void setUpgradeLevel(int upgradeLevel){
-        this.upgradeLevel = upgradeLevel;
     }
 
     //modifies orientation every update
@@ -108,7 +100,7 @@ public class Spaceship extends FlyingObject {
 
     public BufferedImage getImage() {
         //get sprite
-        switch (upgradeLevel) {
+        switch (Vars.gameManager.getUpgradeleve()) {
                     case 1:
                         return Vars.sp_ship_1;
                     case 2:

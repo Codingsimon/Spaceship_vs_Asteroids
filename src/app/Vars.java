@@ -15,21 +15,22 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.text.DecimalFormat;
 import java.util.*;
 
 public class Vars {
-    public static boolean gameRunning = true;
+    public static boolean gameRunning;
     public static double deltaTime;
-    public static double currentTime;
-    public static double previousTime;
+    public static long currentTime;
+    public static long previousTime;
     public static Spaceship spaceship;
-    public static Window window;
+    public static Frame frame;
     public static int gameWidth = 800;
     public static int gameHeight = 800;
     public static DrawCanvas canvas;
     private static double scalefactor = 2.6;
-    public static int live = 4;
+    public static SpaceshipCollision spaceshipCollision;
+    public static EnemyCollision enemyCollision;
+    public static GameManager gameManager;
 
     public static UpListener wListener;
     public static LeftListener aListener;
@@ -37,10 +38,8 @@ public class Vars {
     public static RightListener dListener;
     public static SPACElistener spaceListener;
 
-    public static int level = 0;
+    public static int level;
     public static EnemySporner sporner;
-    public static int points = 0;
-    public static int relativePoints = 0;
 
     public static ArrayList<Enemy> enemyList = new ArrayList<>();
     public static ArrayList<Projectile> projectileList = new ArrayList<>();
@@ -50,6 +49,9 @@ public class Vars {
     public static ArrayList<Explosion> explosionsToDeletList = new ArrayList<>();
     public static ArrayList<Item> itemList = new ArrayList<>();
     public static ArrayList<Item> itemToDeleteList = new ArrayList<>();
+
+    public static GuiManager guiManager;
+    public static ListWriter listWriter;
 
     public static BufferedImage sp_ship_1 = null;
     public static BufferedImage sp_ship_2 = null;
@@ -81,33 +83,38 @@ public class Vars {
     public static Font pixelfont = null;
 
     public Vars(){
+        gameRunning = true;
+        level = 0;
+
+
         //load images
         try {
-            sp_ship_1 = ImageIO.read(new File("sprites/sp_0013_ship_1.png"));
-            sp_ship_2 = ImageIO.read(new File("sprites/sp_0014_ship_2.png"));
-            sp_ship_3 = ImageIO.read(new File("sprites/sp_0015_ship_3.png"));
-            sp_ship_4 = ImageIO.read(new File("sprites/sp_0016_ship_4.png"));
+            xd = ImageIO.read(new File(getClass().getClassLoader().getResource("sp_0013_ship_1.png")));
+            sp_ship_1 = ImageIO.read(new File("src/sprites/sp_0013_ship_1.png"));
+            sp_ship_2 = ImageIO.read(new File("src/sprites/sp_0014_ship_2.png"));
+            sp_ship_3 = ImageIO.read(new File("src/sprites/sp_0015_ship_3.png"));
+            sp_ship_4 = ImageIO.read(new File("src/sprites/sp_0016_ship_4.png"));
 
-            sp_asteroid_brown_big = ImageIO.read(new File("sprites/sp_0006_Astereoid_big.png"));
-            sp_asteroid_brown_medium = ImageIO.read(new File("sprites/sp_0007_Astereoid_medium.png"));
-            sp_asteroid_brown_small = ImageIO.read(new File("sprites/sp_0008_Astereoid_small.png"));
+            sp_asteroid_brown_big = ImageIO.read(new File("src/sprites/sp_0006_Astereoid_big.png"));
+            sp_asteroid_brown_medium = ImageIO.read(new File("src/sprites/sp_0007_Astereoid_medium.png"));
+            sp_asteroid_brown_small = ImageIO.read(new File("src/sprites/sp_0008_Astereoid_small.png"));
 
-            sp_asteroid_green_big = ImageIO.read(new File("sprites/sp_0000_Farbton_Sättigung-1.png"));
-            sp_asteroid_green_medium = ImageIO.read(new File("sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png"));
-            sp_asteroid_green_small = ImageIO.read(new File("sprites/sp_0002_Farbton_Sättigung-1-Kopie.png"));
+            sp_asteroid_green_big = ImageIO.read(new File("src/sprites/sp_0000_Farbton_Sättigung-1.png"));
+            sp_asteroid_green_medium = ImageIO.read(new File("src/sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png"));
+            sp_asteroid_green_small = ImageIO.read(new File("src/sprites/sp_0002_Farbton_Sättigung-1-Kopie.png"));
 
-            sp_asteroid_red_big = ImageIO.read(new File("sprites/sp_0003_Farbton_Sättigung-2.png"));
-            sp_asteroid_red_medium = ImageIO.read(new File("sprites/sp_0004_Farbton_Sättigung-2-Kopie.png"));
-            sp_asteroid_red_small = ImageIO.read(new File("sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
+            sp_asteroid_red_big = ImageIO.read(new File("src/sprites/sp_0003_Farbton_Sättigung-2.png"));
+            sp_asteroid_red_medium = ImageIO.read(new File("src/sprites/sp_0004_Farbton_Sättigung-2-Kopie.png"));
+            sp_asteroid_red_small = ImageIO.read(new File("src/sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
 
-            sp_shoot_small = ImageIO.read(new File("sprites/sp_0010_shoot.png"));
-            sp_heart = ImageIO.read(new File("sprites/sp_0012_life.png"));
+            sp_shoot_small = ImageIO.read(new File("src/sprites/sp_0010_shoot.png"));
+            sp_heart = ImageIO.read(new File("src/sprites/sp_0012_life.png"));
 
-            sp_ufo = ImageIO.read(new File("sprites/sp_0011_UFO.png"));
+            sp_ufo = ImageIO.read(new File("src/sprites/sp_0011_UFO.png"));
 
-            sp_fire = Toolkit.getDefaultToolkit().createImage("sprites/fire.gif");
+            sp_fire = Toolkit.getDefaultToolkit().createImage("src/sprites/fire.gif");
 
-            sp_item_shield = ImageIO.read(new File("sprites/sp_00018_item_shield.png"));
+            sp_item_shield = ImageIO.read(new File("src/sprites/sp_00018_item_shield.png"));
 
 
         } catch (IOException e) {
@@ -116,9 +123,9 @@ public class Vars {
 
 
         try {
-            pixelfont = Font.createFont(Font.TRUETYPE_FONT,new File("font/Connection.otf")).deriveFont(25f);
+            pixelfont = Font.createFont(Font.TRUETYPE_FONT,new File("src/font/Connection.otf")).deriveFont(25f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("font/Connection.otf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src/font/Connection.otf")));
         } catch (FontFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -132,19 +139,4 @@ public class Vars {
         return scalefactor;
     }
 
-    public static BufferedImage getShipImage(){
-        switch (spaceship.getUpgradeLevel()){
-            case 1: return sp_ship_1;
-            case 2: return sp_ship_2;
-            case 3: return sp_ship_3;
-            case 4: return sp_ship_4;
-        }
-        return null;
-    }
-
-    public static String getFormatedPoints(){
-        DecimalFormat df = (DecimalFormat)DecimalFormat.getInstance(Locale.GERMAN);
-        df.applyPattern( "#,###,##0" );
-        return df.format(points);
-    }
 }

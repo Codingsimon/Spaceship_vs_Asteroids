@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Spaceship_vs_Asteroids:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Spaceship_vs_Asteroids_jar</output-path>
+    <root id="archive" name="Spaceship_vs_Asteroids.jar">
+      <element id="module-output" name="Spaceship_vs_Asteroids" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/sprites" />
+    </root>
+  </artifact>
+</component>

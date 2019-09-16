@@ -1,17 +1,19 @@
 package app;
 
-import javax.swing.JFrame;
+import javax.swing.*;
+import java.awt.*;
 
 @SuppressWarnings("serial")
-public class Window extends JFrame{
+public class Frame extends JFrame{
 
-    public Window(){
+    public Frame(){
         setSize(Vars.gameWidth,Vars.gameHeight);
         setVisible(true);
-        setTitle("First GUI");
+        setTitle("Spaceship vs Asteroids");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(false);
+        setLayout(new BorderLayout());
     }
 
 }

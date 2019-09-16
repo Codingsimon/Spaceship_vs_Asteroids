@@ -15,27 +15,44 @@ public class Projectile extends FlyingObject{
         this.creator = creator;
 
         if (creator instanceof Spaceship){
+            //from Spaceship
             posx = Vars.spaceship.getCenterX();
             posy = Vars.spaceship.getCenterY();
             rot = Vars.spaceship.getOrientation();
             xvel = Math.sin(Math.toRadians(rot)) * shotspeed;
             yvel = Math.cos(Math.toRadians(rot)) * shotspeed;
         } else {
-            posx = creator.getX() - this.getWidth()/2;
-            posy = creator.getY() - this.getHeight()/2;
-            double xlength = Vars.spaceship.getY() - creator.getY();
-            double ylenght = Vars.spaceship.getX() - creator.getX();
+            //from UFO
+            posx = creator.getCenterX();
+            posy = creator.getCenterY();
+            double xlength = Vars.spaceship.getCenterY() - creator.getCenterY();
+            double ylenght = Vars.spaceship.getCenterX() - creator.getCenterX();
             double vektorLength = pythagorean(xlength, ylenght);
 
 
             //sin calculation
             rot =  (int)Math.toDegrees(Math.asin(ylenght / vektorLength));
+            rot = Math.abs(rot);
 
+
+            //bottom right
             if (xlength > 0 && ylenght > 0){
-                rot += 90;
+                rot = 180 - rot;
             }
+            //bottom left
             if (xlength > 0 && ylenght < 0){
-                rot -= 90;
+                rot += 180;
+            }
+
+            //top left
+            if (xlength < 0 && ylenght < 0){
+                rot = 360 - rot;
+
+            }
+
+            //top right
+            if (xlength > 0 && ylenght < 0){
+                rot = rot;
             }
 
             xvel =  (Vars.spaceship.getX() - creator.getX())  / vektorLength * shotspeed;
@@ -91,7 +108,6 @@ public class Projectile extends FlyingObject{
         }
         //left
         if (getX() < 0 - this.getWidth()){
-            System.out.println("bingo");
             posx += Vars.gameWidth;
             posy = Vars.gameHeight - posy;
             reduceWarpCounter();
@@ -104,7 +120,7 @@ public class Projectile extends FlyingObject{
         return warpcounter;
     }
 
-//    public Enemy collisionProjectileEnemy(){
+//    public Enemy checkCollisionProjectileEnemy(){
 //        for (Enemy e : Vars.enemyList) {
 //
 //            //Vertical inside

@@ -68,7 +68,6 @@ public abstract class FlyingObject {
         }
         //left
         if (getX() < 0 - this.getWidth()){
-            System.out.println("bingo");
             posx += Vars.gameWidth;
             posy = Vars.gameHeight - posy;
             return;

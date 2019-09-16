@@ -45,7 +45,6 @@ public class EnemySporner {
     
     public void levelUp(){
         Vars.level += 1;
-        System.out.println(Vars.level);
         speedlevel += 1;
         setEnemycount();
         newLevelSetup();
@@ -54,25 +53,25 @@ public class EnemySporner {
     public void newLevelSetup(){
         Vars.enemyList.clear();
 
-        Enemy enemytest = new Enemy(EnemyType.UFO, 1);
-        Vars.enemyList.add(enemytest);
+//        Enemy enemytest = new Enemy(EnemyType.UFO, 1);
+//        Vars.enemyList.add(enemytest);
 
-//        for (int i = 0; i < levelList[Vars.level][0]; i++) {
-//            Enemy enemy = new Enemy(EnemyType.UFO, 1);
-//            Vars.enemyList.add(enemy);
-//        }
-//        for (int i = 0; i < levelList[Vars.level][1]; i++) {
-//            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.SMALL, speedlevel);
-//            Vars.enemyList.add(enemy);
-//        }
-//        for (int i = 0; i < levelList[Vars.level][2]; i++) {
-//            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.MEDIUM, speedlevel);
-//            Vars.enemyList.add(enemy);
-//        }
-//        for (int i = 0; i < levelList[Vars.level][3]; i++) {
-//            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.LARGE, speedlevel);
-//            Vars.enemyList.add(enemy);
-//        }
+        for (int i = 0; i < levelList[Vars.level][0]; i++) {
+            Enemy enemy = new Enemy(EnemyType.UFO, 1);
+            Vars.enemyList.add(enemy);
+        }
+        for (int i = 0; i < levelList[Vars.level][1]; i++) {
+            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.SMALL, speedlevel);
+            Vars.enemyList.add(enemy);
+        }
+        for (int i = 0; i < levelList[Vars.level][2]; i++) {
+            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.MEDIUM, speedlevel);
+            Vars.enemyList.add(enemy);
+        }
+        for (int i = 0; i < levelList[Vars.level][3]; i++) {
+            Enemy enemy = new Enemy(EnemyType.ASTEREOID, AsteroidSize.LARGE, speedlevel);
+            Vars.enemyList.add(enemy);
+        }
 
     }
 
