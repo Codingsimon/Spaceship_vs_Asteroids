@@ -110,13 +110,13 @@ public class GameManager {
     }
 
     void checkForUpgrad(){
-        if (relativePoints >= 30_000 && upgradeLevel == 3){
+        if (relativePoints >= 17_000 && upgradeLevel == 3){
             upgradeLevel = 4;
             add2Lives();
             relativePoints = 0;
             return;
         }
-        if (relativePoints >= 15_000 && upgradeLevel == 2){
+        if (relativePoints >= 13_000 && upgradeLevel == 2){
             upgradeLevel = 3;
             add2Lives();
             relativePoints = 0;

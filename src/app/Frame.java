@@ -14,6 +14,7 @@ public class Frame extends JFrame{
         setLocationRelativeTo(null);
         setResizable(false);
         setLayout(new BorderLayout());
+        setIconImage(Vars.sp_ship_4);
     }
 
 }

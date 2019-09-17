@@ -15,6 +15,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.*;
 
 public class Vars {
@@ -89,43 +91,46 @@ public class Vars {
 
         //load images
         try {
-            xd = ImageIO.read(new File(getClass().getClassLoader().getResource("sp_0013_ship_1.png")));
-            sp_ship_1 = ImageIO.read(new File("src/sprites/sp_0013_ship_1.png"));
-            sp_ship_2 = ImageIO.read(new File("src/sprites/sp_0014_ship_2.png"));
-            sp_ship_3 = ImageIO.read(new File("src/sprites/sp_0015_ship_3.png"));
-            sp_ship_4 = ImageIO.read(new File("src/sprites/sp_0016_ship_4.png"));
+            sp_ship_1 = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0013_ship_1.png"));
+            sp_ship_2 = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0014_ship_2.png"));
+            sp_ship_3 = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0015_ship_3.png"));
+            sp_ship_4 = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0016_ship_4.png"));
 
-            sp_asteroid_brown_big = ImageIO.read(new File("src/sprites/sp_0006_Astereoid_big.png"));
-            sp_asteroid_brown_medium = ImageIO.read(new File("src/sprites/sp_0007_Astereoid_medium.png"));
-            sp_asteroid_brown_small = ImageIO.read(new File("src/sprites/sp_0008_Astereoid_small.png"));
+            sp_asteroid_brown_big = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0006_Astereoid_big.png"));
+            sp_asteroid_brown_medium = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0007_Astereoid_medium.png"));
+            sp_asteroid_brown_small = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0008_Astereoid_small.png"));
 
-            sp_asteroid_green_big = ImageIO.read(new File("src/sprites/sp_0000_Farbton_Sättigung-1.png"));
-            sp_asteroid_green_medium = ImageIO.read(new File("src/sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png"));
-            sp_asteroid_green_small = ImageIO.read(new File("src/sprites/sp_0002_Farbton_Sättigung-1-Kopie.png"));
+            sp_asteroid_green_big = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0000_Farbton_Sättigung-1.png"));
+            sp_asteroid_green_medium = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0001_Farbton_Sättigung-1-Kopie-2.png"));
+            sp_asteroid_green_small = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0002_Farbton_Sättigung-1-Kopie.png"));
 
-            sp_asteroid_red_big = ImageIO.read(new File("src/sprites/sp_0003_Farbton_Sättigung-2.png"));
-            sp_asteroid_red_medium = ImageIO.read(new File("src/sprites/sp_0004_Farbton_Sättigung-2-Kopie.png"));
-            sp_asteroid_red_small = ImageIO.read(new File("src/sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
+            sp_asteroid_red_big = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0003_Farbton_Sättigung-2.png"));
+            sp_asteroid_red_medium = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0004_Farbton_Sättigung-2-Kopie.png"));
+            sp_asteroid_red_small = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0005_Farbton_Sättigung-2-Kopie-2.png"));
 
-            sp_shoot_small = ImageIO.read(new File("src/sprites/sp_0010_shoot.png"));
-            sp_heart = ImageIO.read(new File("src/sprites/sp_0012_life.png"));
+            sp_shoot_small = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0010_shoot.png"));
+            sp_heart = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0012_life.png"));
 
-            sp_ufo = ImageIO.read(new File("src/sprites/sp_0011_UFO.png"));
+            sp_ufo = ImageIO.read(App.class.getResourceAsStream("/sprites/sp_0011_UFO.png"));
 
-            sp_fire = Toolkit.getDefaultToolkit().createImage("src/sprites/fire.gif");
 
-            sp_item_shield = ImageIO.read(new File("src/sprites/sp_00018_item_shield.png"));
+            URL fireImage = App.class.getResource("/sprites/fire.gif");
+            sp_fire = Toolkit.getDefaultToolkit().createImage(fireImage);
+
+
+            sp_item_shield = ImageIO.read(new File("/sprites/sp_00018_item_shield.png"));
 
 
         } catch (IOException e) {
-            System.out.println("Bilder konnten nicht geladen werden. Da Pfad passt nu ned!!!");
+            System.out.println("Image loading Problem");
         }
 
 
         try {
-            pixelfont = Font.createFont(Font.TRUETYPE_FONT,new File("src/font/Connection.otf")).deriveFont(25f);
+            InputStream is = this.getClass().getResourceAsStream("/font/Connection.otf");
+            pixelfont = Font.createFont(Font.TRUETYPE_FONT, is).deriveFont(25f);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src/font/Connection.otf")));
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, is));
         } catch (FontFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {

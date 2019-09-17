@@ -160,7 +160,7 @@ public class DrawCanvas extends JComponent{
                 break;
             }
 
-            g.drawString(points + " ............ " + name,300,100 + counter * 50);
+            g.drawString(points + " ............ " + name,200,100 + counter * 50);
         }
     }
 

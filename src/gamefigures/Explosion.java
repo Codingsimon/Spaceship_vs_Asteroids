@@ -1,5 +1,6 @@
 package gamefigures;
 
+import app.App;
 import app.Vars;
 
 import javax.imageio.ImageIO;
@@ -7,34 +8,30 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
 public class Explosion {
     private int posx;
     private int posy;
     private int width;
     private int height;
-    Image image = null;
     private long startTime;
     private long deltaTime;
     private long currentTime;
-    BufferedImage tempImage;
+    Image tempImage;
 
     public Explosion(int posx, int posy){
-        try {
-             tempImage= ImageIO.read(new File("src/sprites/Explosion_small.gif"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        this.height = tempImage.getHeight();
-        this.width = tempImage.getWidth();
+            URL explosionImage = App.class.getResource("/sprites/Explosion_small.gif");
+            tempImage = Toolkit.getDefaultToolkit().createImage(explosionImage);
+
+        this.height = tempImage.getHeight(null);
+        this.width = tempImage.getWidth(null);
 
         startTime = System.currentTimeMillis();
         this.posx = posx - getWidth()/2;
         this.posy = posy - getHeight()/2;
 
-
-        image = Toolkit.getDefaultToolkit().createImage("src/sprites/Explosion_small.gif");
     }
 
 
@@ -59,7 +56,7 @@ public class Explosion {
     }
 
     public Image getImage(){
-        return image;
+        return tempImage;
     }
 
     public int getY(){
