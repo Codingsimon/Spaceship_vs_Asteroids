@@ -1,5 +1,5 @@
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.gif)
 
 " I need YOU to blast these fucks to hell! " - guy high up in the command chain
 The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before 
