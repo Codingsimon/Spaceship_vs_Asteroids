@@ -1,4 +1,3 @@
-
 ![Screenshot](screenshot.gif)
 
 " I need YOU to blast these fucks to hell! " - guy high up in the command chain
@@ -16,3 +15,9 @@ Can you use the potent mix of
 - and humanities most advanced top-secret weaponry (fire with SPACE)
 
 to save Humanity?
+
+
+
+![Gameplay Image](gameplay1.png)
+![Gameplay Image](gameplay2.png)
+![Gameplay Image](gameplay3.png)
