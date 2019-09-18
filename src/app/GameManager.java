@@ -75,20 +75,20 @@ public class GameManager {
     public void checkWhichPointsToSubtrakt(Enemy enemy){
         if (enemy.getType() == EnemyType.ASTEREOID){
             switch (enemy.getSize()){
-                case LARGE : subtractPoint(2_000);
+                case LARGE : subtractPoint(5_000);
                     break;
-                case MEDIUM: subtractPoint(200);
+                case MEDIUM: subtractPoint(3000);
                     break;
-                case SMALL: subtractPoint(100);
+                case SMALL: subtractPoint(400);
                     break;
             }
         } else if (enemy.getType() == EnemyType.UFO){
-            subtractPoint(3000);
+            subtractPoint(8000);
         }
     }
 
     public void subtractPointSelfeShot(){
-        points -= 200;
+        points -= 400;
     }
 
     void checkForDowngrade(){
@@ -110,19 +110,19 @@ public class GameManager {
     }
 
     void checkForUpgrad(){
-        if (relativePoints >= 17_000 && upgradeLevel == 3){
+        if (relativePoints >= 35_000 && upgradeLevel == 3){
             upgradeLevel = 4;
             add2Lives();
             relativePoints = 0;
             return;
         }
-        if (relativePoints >= 13_000 && upgradeLevel == 2){
+        if (relativePoints >= 30_000 && upgradeLevel == 2){
             upgradeLevel = 3;
             add2Lives();
             relativePoints = 0;
             return;
         }
-        if (relativePoints >= 10_000 && upgradeLevel == 1){
+        if (relativePoints >= 22_000 && upgradeLevel == 1){
             upgradeLevel = 2;
             add2Lives();
             relativePoints = 0;

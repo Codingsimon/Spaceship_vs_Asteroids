@@ -86,7 +86,7 @@ public class Vars {
 
     public Vars(){
         gameRunning = true;
-        level = 0;
+        level = 1;
 
 
         //load images

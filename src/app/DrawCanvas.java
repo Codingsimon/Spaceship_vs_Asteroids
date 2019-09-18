@@ -156,6 +156,14 @@ public class DrawCanvas extends JComponent{
             String name = entry.getName();
             counter++;
 
+
+            if (Vars.guiManager.currentName.equals(name) && Vars.guiManager.currentName != "none"){
+                g.setColor(Color.RED);
+            } else {
+                g.setColor(Color.WHITE);
+            }
+
+
             if (counter >= 10){
                 break;
             }

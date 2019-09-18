@@ -15,12 +15,12 @@ public class GuiManager {
     JButton buttonOK;
     JButton buttonReplay;
     JLabel label;
-
+    public String currentName;
 
 
     public GuiManager(){
         Vars.frame = new Frame();
-
+        currentName = "none";
 ////        //Canvas Setup
         Vars.canvas = new DrawCanvas();
         Vars.canvas.setSize(Vars.gameWidth, Vars.gameHeight - shortener);
@@ -74,6 +74,7 @@ public class GuiManager {
             @Override
             public void actionPerformed(ActionEvent e) {
                 name = tfName.getText();
+                currentName = name;
                 Vars.listWriter.writeNewEntry(name, Vars.gameManager.getPoints());
                 Vars.canvas.repaint();
                 hideInputField();

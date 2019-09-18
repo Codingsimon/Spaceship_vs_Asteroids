@@ -4,3 +4,5 @@ instant defeat;400
 Instatn_Red_Soup;4670
 Rodeo;20785
 The Loser himselfe;4201
+Bingoman;22280
+Losing Instance;-800
