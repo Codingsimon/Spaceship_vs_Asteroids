@@ -4,9 +4,6 @@
 The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before 
 \- not to mention the asteroid storm heading directly for earth itself.
 
-The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before - not to mention the asteroid storm heading directly for earth itself.
-
-
 Can you use the potent mix of
 
 - your ace flying skills (accelerate/decelerate with arrow UP/DOWN), 
