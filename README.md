@@ -2,8 +2,7 @@
 
 " I need YOU to blast these fucks to hell! " - guy high up in the command chain
 The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before 
-- not to mention the asteroid storm heading directly for earth itself.
-" I need YOU to blast these fucks to hell! " - guy high up in the command chain
+\- not to mention the asteroid storm heading directly for earth itself.
 
 The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before - not to mention the asteroid storm heading directly for earth itself.
 
