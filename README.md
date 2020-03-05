@@ -1,20 +1,7 @@
 ![Screenshot](screenshot.gif)
 
-" I need YOU to blast these fucks to hell! " - guy high up in the command chain
-The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before 
-- not to mention the asteroid storm heading directly for earth itself.
-" I need YOU to blast these fucks to hell! " - guy high up in the command chain
-
-The galaxy is in dire need of your assistance, as peace and prosperity are menaced by an alien threat of an extent unseen ever before - not to mention the asteroid storm heading directly for earth itself.
-
-
-Can you use the potent mix of
-
-- your ace flying skills (accelerate/decelerate with arrow UP/DOWN), 
-- your swift maneuvering and the quickest of wits (rotate arrow LEFT/RIGHT),
-- and humanities most advanced top-secret weaponry (fire with SPACE)
-
-to save Humanity?
+This is a 2D retro themed space shoot ’em up. As a spaceship pilot you are defending earth from asteroids and bad alien. This Game is a tribute to the classic 1980 arcade games. 
+It took us about six days to code the game from scratch. We used Java for the entier game and Swing for the visualisation. The biggest challenge during the production was the setup of the project structure for a project of this size. From a technical point of view we had to implement trigonometry functions and vektor calculations. The pixle design of the game elements is also created by us.
 
 
 
